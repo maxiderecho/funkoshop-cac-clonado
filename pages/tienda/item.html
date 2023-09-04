@@ -32,55 +32,33 @@
     </header>
 
     <main>
-      <section class="banner">
-        <article class="banner__content">
-          <h2 class="banner__title">Nuevos ingresos</h2>
-          <p class="banner__description">
-            Descubrí el próximo Funko Pop de tu colección
-          </p>
-          <a class="banner__link" href="./shop.html">SHOP</a>
-        </article>
-      </section>
-
-      <section class="colecciones">
-        <article class="colecciones__content">
-          <h2 class="colecciones__title">Star Wars & The Mandalorian</h2>
-          <p class="colecciones__description">
-            Disfruta de una saga que sigue agregando personajes a su colección.
-          </p>
-          <a class="colecciones__link" href="">VER COLECCIÓN</a>
+      <section class="item">
+        <picture class="item__img">
           <img
-            class="colecciones__img"
-            src="img/star-wars/baby-yoda-1.webp"
-            alt="Baby Yoda"
+            src="../../img/star-wars/baby-yoda-1.webp"
+            alt="Baby Yoda Blueball"
           />
-        </article>
+        </picture>
 
-        <article class="colecciones__content">
-          <h2 class="colecciones__title">POKEMON INDIGO</h2>
-          <p class="colecciones__description">
-            Atrapa todos los que puedas y disfruta de una colección llena de
-            amigos
+        <article class="item__content">
+          <p class="item__license">STAR WARS</p>
+          <h1 class="item__title">BABY YODA BLUEBALL</h1>
+          <p class="item__description">
+            Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga,
+            edición limitada.
           </p>
-          <a class="colecciones__link" href="">VER COLECCIÓN</a>
-          <img
-            class="colecciones__img"
-            src="img/pokemon/vulpix-1.webp"
-            alt="Vulpix"
-          />
-        </article>
-
-        <article class="colecciones__content">
-          <h2 class="colecciones__title">HARRY POTTER</h2>
-          <p class="colecciones__description">
-            Revive los recuerdos de una saga llena de magia y encanto
-          </p>
-          <a class="colecciones__link" href="">VER COLECCIÓN</a>
-          <img
-            class="colecciones__img"
-            src="img/harry-potter/snape-patronus-1.webp"
-            alt="Snape Patronus"
-          />
+          <p class="item__price">$1799,99</p>
+          <div class="item__carrito">
+            <input class="item__cantidad" type="number" placeholder="0" />
+            <input
+              class="item__add-cart"
+              type="button"
+              value="Agregar al Carrito"
+            />
+          </div>
+          <a class="item__pago" href="">
+            Ver métodos de pago - 3 CUOTAS SIN INTERÉS
+          </a>
         </article>
       </section>
 
@@ -145,19 +123,21 @@
     </main>
 
     <footer>
-      <nav>
-        <ul>
-          <li><a href="./shop.html">SHOP</a></li>
-          <li><a href="./login.html">INGRESAR </a></li>
-          <li><a href="./contacto.html">CONTACTO</a></li>
-        </ul>
+      <section>
+        <nav>
+          <ul>
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="./login.html">INGRESAR </a></li>
+            <li><a href="./contacto.html">CONTACTO</a></li>
+          </ul>
 
-        <picture>
-          <a href="./index.html">
-            <img src="img/branding/isotype.svg" alt="Logo Funko Shop" />
-          </a>
-        </picture>
-      </nav>
+          <picture>
+            <a href="./index.html">
+              <img src="img/branding/isotype.svg" alt="Logo Funko Shop" />
+            </a>
+          </picture>
+        </nav>
+      </section>
 
       <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
