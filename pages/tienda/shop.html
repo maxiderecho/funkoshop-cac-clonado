@@ -3,65 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FunkoShop - Shop</title>
+    <title>Shop - Funkoshop</title>
+    <!-- <link rel="stylesheet" href="../../css/style.css" /> -->
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav class="navbar">
+        <picture>
+          <a href="../../index.html">
+            <img
+              src="../../img/branding/logo_light_horizontal.svg"
+              alt="Logo Horizontal Funko Shop"
+            />
+          </a>
+        </picture>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contacto.html">CONTACTO</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../admin/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__cart" href="./carrito.html">
+              <img src="../../img/icons/cart-icon.svg" alt="Cart icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <aside class="filter">
-      <div class="filter__search">
+      <div class="filter__content">
         <h2 class="filter__title">BUSCAR</h2>
         <input
-          class="filter__input-text"
+          class="filter__search"
           type="text"
+          name="search"
+          id="search"
           placeholder="ítem o categoría"
         />
       </div>
 
-      <div class="filter__order">
+      <div class="filter__content">
         <h2 class="filter__title">ORDENAR POR</h2>
-        <select class="filter__input-select" name="order">
-          <option value="">Mayor a menor</option>
-          <option value="">Menor a mayor</option>
+        <select class="filter__order" name="order" id="order">
+          <option value="mayor">Mayor a menor</option>
+          <option value="menor">Menor a mayor</option>
         </select>
       </div>
 
-      <div class="filter__price">
+      <div class="filter__content">
         <h2 class="filter__title">PRECIO</h2>
-        <label class="filter__input-min" for="min">
-          <p>MIN</p>
-          <input type="number" name="min" />
-        </label>
-        <label class="filter__input-max" for="max">
-          <p>MAX</p>
-          <input type="number" name="max" />
-        </label>
+        <label class="filter__label--min" for="min">MIN</label>
+        <input class="filter__price--min" type="number" name="min" id="min" />
+        <p class="filter__price--divisor">-</p>
+        <label class="filter__label--max" for="max">MAX</label>
+        <input class="filter__price--max" type="number" name="max" id="max" />
       </div>
 
-      <div class="filter__filtro">
+      <div class="filter__content">
         <h2 class="filter__title">FILTRAR</h2>
-        <ul class="filter__check-list">
-          <li class="filter__check-item">
-            <label for="nuevos">
-              <input type="checkbox" name="nuevos" />
-              <p>NUEVOS</p>
+        <ul class="filter__list">
+          <li class="filter__checkbox">
+            <input
+              class="filter__checkbox__input"
+              type="checkbox"
+              name="nuevos"
+              id="nuevos"
+            />
+            <label class="filter__checkbox__label" for="nuevos">NUEVOS</label>
+          </li>
+          <li class="filter__checkbox">
+            <input
+              class="filter__checkbox__input"
+              type="checkbox"
+              name="ofertas"
+              id="ofertas"
+            />
+            <label class="filter__checkbox__label" for="ofertas">OFERTAS</label>
+          </li>
+          <li class="filter__checkbox">
+            <input
+              class="filter__checkbox__input"
+              type="checkbox"
+              name="edicion-especial"
+              id="edicion-especial"
+            />
+            <label class="filter__checkbox__label" for="edicion-especial">
+              EDICIÓN ESPECIAL
             </label>
           </li>
-          <li class="filter__check-item">
-            <label for="ofertas">
-              <input type="checkbox" name="ofertas" />
-              <p>OFERTAS</p>
-            </label>
-          </li>
-          <li class="filter__check-item">
-            <label for="edicion-especial">
-              <input type="checkbox" name="edicion-especial" />
-              <p>EDICIÓN ESPECIAL</p>
-            </label>
-          </li>
-          <li class="filter__check-item">
-            <label for="favoritos">
-              <input type="checkbox" name="favoritos" />
-              <p>FAVORITOS</p>
+          <li class="filter__checkbox">
+            <input
+              class="filter__checkbox__input"
+              type="checkbox"
+              name="favoritos"
+              id="favoritos"
+            />
+            <label class="filter__checkbox__label" for="favoritos">
+              FAVORITOS
             </label>
           </li>
         </ul>
@@ -69,6 +114,33 @@
     </aside>
     <main></main>
     <section></section>
-    <footer></footer>
+    <footer>
+      <nav class="navbar">
+        <ul>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../admin/register.html">
+              REGISTRARSE
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../admin/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+
+        <picture>
+          <a href="../../index.html">
+            <img src="../../img/branding/isotype.svg" alt="Logo Funko Shop" />
+          </a>
+        </picture>
+      </nav>
+
+      <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
   </body>
 </html>
