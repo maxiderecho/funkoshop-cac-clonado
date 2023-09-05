@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FunkoShop - Shop</title>
+  </head>
+  <body>
+    <header></header>
+    <aside class="filter">
+      <div class="filter__search">
+        <h2 class="filter__title">BUSCAR</h2>
+        <input
+          class="filter__input-text"
+          type="text"
+          placeholder="ítem o categoría"
+        />
+      </div>
+
+      <div class="filter__order">
+        <h2 class="filter__title">ORDENAR POR</h2>
+        <select class="filter__input-select" name="order">
+          <option value="">Mayor a menor</option>
+          <option value="">Menor a mayor</option>
+        </select>
+      </div>
+
+      <div class="filter__price">
+        <h2 class="filter__title">PRECIO</h2>
+        <label class="filter__input-min" for="min">
+          <p>MIN</p>
+          <input type="number" name="min" />
+        </label>
+        <label class="filter__input-max" for="max">
+          <p>MAX</p>
+          <input type="number" name="max" />
+        </label>
+      </div>
+
+      <div class="filter__filtro">
+        <h2 class="filter__title">FILTRAR</h2>
+        <ul class="filter__check-list">
+          <li class="filter__check-item">
+            <label for="nuevos">
+              <input type="checkbox" name="nuevos" />
+              <p>NUEVOS</p>
+            </label>
+          </li>
+          <li class="filter__check-item">
+            <label for="ofertas">
+              <input type="checkbox" name="ofertas" />
+              <p>OFERTAS</p>
+            </label>
+          </li>
+          <li class="filter__check-item">
+            <label for="edicion-especial">
+              <input type="checkbox" name="edicion-especial" />
+              <p>EDICIÓN ESPECIAL</p>
+            </label>
+          </li>
+          <li class="filter__check-item">
+            <label for="favoritos">
+              <input type="checkbox" name="favoritos" />
+              <p>FAVORITOS</p>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main></main>
+    <section></section>
+    <footer></footer>
+  </body>
+</html>
