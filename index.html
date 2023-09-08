@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Funkoshop</title>
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <picture>
+      <nav class="navbar container">
+        <picture class="navbar__img">
           <a href="./index.html">
             <img
               src="./img/branding/logo_light_horizontal.svg"
@@ -39,69 +39,83 @@
       </nav>
     </header>
 
-    <main>
-      <section class="banner">
-        <article class="banner__content">
-          <h2 class="banner__title">Nuevos ingresos</h2>
-          <p class="banner__text">
-            Descubrí el próximo Funko Pop de tu colección
-          </p>
-          <a class="banner__link" href="./pages/tienda/shop.html">SHOP</a>
-        </article>
-      </section>
+    <section class="banner">
+      <article class="banner__content container">
+        <h2 class="banner__title">Nuevos ingresos</h2>
+        <p class="banner__text">
+          Descubrí el próximo Funko Pop de tu colección
+        </p>
+        <a class="banner__link" href="./pages/tienda/shop.html">SHOP</a>
+      </article>
+    </section>
 
-      <section class="colecciones">
+    <main>
+      <section class="colecciones container">
         <article class="colecciones__content">
-          <h2 class="colecciones__title">Star Wars & The Mandalorian</h2>
+          <h3 class="colecciones__title">Star Wars & The Mandalorian</h3>
           <p class="colecciones__text">
             Disfruta de una saga que sigue agregando personajes a su colección.
           </p>
+          <div class="colecciones__line"></div>
           <a class="colecciones__link" href="">VER COLECCIÓN</a>
-          <img
-            class="colecciones__img"
-            src="./img/star-wars/baby-yoda-1.webp"
-            alt="Baby Yoda"
-          />
         </article>
 
+        <picture class="colecciones__img">
+          <img src="./img/star-wars/baby-yoda-1.webp" alt="Baby Yoda" />
+        </picture>
+      </section>
+
+      <section class="colecciones container">
         <article class="colecciones__content">
-          <h2 class="colecciones__title">POKEMON INDIGO</h2>
+          <h3 class="colecciones__title">POKEMON INDIGO</h3>
           <p class="colecciones__text">
             Atrapa todos los que puedas y disfruta de una colección llena de
             amigos
           </p>
+          <div class="colecciones__line"></div>
           <a class="colecciones__link" href="">VER COLECCIÓN</a>
-          <img
-            class="colecciones__img"
-            src="./img/pokemon/vulpix-1.webp"
-            alt="Vulpix"
-          />
         </article>
 
+        <picture class="colecciones__img">
+          <img src="./img/pokemon/vulpix-1.webp" alt="Vulpix" />
+        </picture>
+      </section>
+
+      <section class="colecciones container">
         <article class="colecciones__content">
-          <h2 class="colecciones__title">HARRY POTTER</h2>
+          <h3 class="colecciones__title">HARRY POTTER</h3>
           <p class="colecciones__text">
             Revive los recuerdos de una saga llena de magia y encanto
           </p>
+          <div class="colecciones__line"></div>
           <a class="colecciones__link" href="">VER COLECCIÓN</a>
+        </article>
+
+        <picture class="colecciones__img">
           <img
-            class="colecciones__img"
             src="./img/harry-potter/snape-patronus-1.webp"
             alt="Snape Patronus"
           />
-        </article>
+        </picture>
       </section>
 
-      <section class="novedades">
-        <h2 class="novedades__title">ÚLTIMOS LANZAMIENTOS</h2>
+      <section class="novedades container">
+        <h3 class="novedades__title">ÚLTIMOS LANZAMIENTOS</h3>
         <ul class="novedades__list">
           <li class="novedades__item">
             <article class="card-item">
               <a class="card-item__link" href="./pages/tienda/item.html">
                 <picture class="card-item__img">
+                  <span class="card-item__tag">NUEVO</span>
                   <img
+                    class="card-item__img--front"
                     src="./img/star-wars/trooper-1.webp"
-                    alt="Stormtrooper lightsaber"
+                    alt="Stormtrooper Lightsaber"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="./img/star-wars/trooper-box.webp"
+                    alt="Stormtrooper Lightsaber box"
                   />
                 </picture>
                 <div class="card-item__content">
@@ -118,7 +132,17 @@
             <article class="card-item">
               <a class="card-item__link" href="./pages/tienda/item.html">
                 <picture class="card-item__img">
-                  <img src="./img/pokemon/pidgeotto-1.webp" alt="Pidgeotto" />
+                  <span class="card-item__tag">NUEVO</span>
+                  <img
+                    class="card-item__img--front"
+                    src="./img/pokemon/pidgeotto-1.webp"
+                    alt="Pidgeotto"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="./img/pokemon/pidgeotto-box.webp"
+                    alt="Pidgeotto Box"
+                  />
                 </picture>
                 <div class="card-item__content">
                   <p class="card-item__license">POKEMON</p>
@@ -134,9 +158,16 @@
             <article class="card-item">
               <a class="card-item__link" href="./pages/tienda/item.html">
                 <picture class="card-item__img">
+                  <span class="card-item__tag">NUEVO</span>
                   <img
+                    class="card-item__img--front"
                     src="./img/harry-potter/luna-1.webp"
                     alt="Luna Lovegood Lion Mask"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="./img/harry-potter/luna-box.webp"
+                    alt="Luna Lovegood Lion Mask Box"
                   />
                 </picture>
                 <div class="card-item__content">
@@ -153,8 +184,8 @@
     </main>
 
     <footer>
-      <nav class="navbar">
-        <ul>
+      <section class="navbar container">
+        <ul class="navbar__footer">
           <li class="navbar__item">
             <a class="navbar__link" href="./pages/tienda/shop.html">SHOP</a>
           </li>
@@ -173,14 +204,16 @@
           </li>
         </ul>
 
-        <picture>
+        <picture class="navbar__img">
           <a href="./index.html">
             <img src="img/branding/isotype.svg" alt="Logo Funko Shop" />
           </a>
         </picture>
-      </nav>
+      </section>
 
-      <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
+      <p class="copyright container">
+        All rights reserved 2023 - Funkoshop &copy;
+      </p>
     </footer>
   </body>
 </html>
