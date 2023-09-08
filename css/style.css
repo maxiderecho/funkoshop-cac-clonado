@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
 
-/* Variables */
+/* --------------------------------- Variables --------------------------------- */
 
 :root {
   /* :root y html son dos selectores que seleccionan el elemento raíz del documento */
@@ -63,7 +63,8 @@
   --spacing-8: 0.8rem;
 }
 
-/* Normalizaciones */
+/* --------------------------------- Normalizaciones --------------------------------- */
+
 /* "Reseteamos" los estilos por defecto que traen los navegadores */
 
 * {
@@ -73,8 +74,11 @@
 }
 
 html {
+  font-size: 62.5%;
+  /* La fuente del navegador por defecto mide 16px. */
+  /* Con esta normalización logramos que mida 10px */
+  /* Esto permite que sea mucho más facil trabajar con medidas relativas */
   font-family: var(--fuente-base);
-  font-size: 62.5%; /* La fuente del navegador por defecto mide 16px. Con esta normalización logramos que mida 10px permitiendo que sea mucho más facil trabajar con la medida 'em' ya que cada 'em' equivale a la medida default del navegador (Ahora 1em sería igual a 10px) */
   color: var(--color_fuente_oscuro);
 }
 
@@ -108,7 +112,7 @@ img {
   margin: 0 auto;
 }
 
-/* HEADER */
+/* --------------------------------- HEADER --------------------------------- */
 
 header {
   background-color: var(--background-oscuro);
@@ -140,11 +144,11 @@ header {
   transform: scale(1.18, 1.18);
 }
 
-/* FOOTER */
+/* --------------------------------- FOOTER --------------------------------- */
 
 footer {
   background-color: var(--background-oscuro);
-  padding: var(--spacing-68);
+  padding: var(--spacing-68) var(--spacing-12);
   padding-bottom: var(--spacing-8);
 }
 
@@ -159,12 +163,12 @@ footer {
   padding-top: var(--spacing-68);
 }
 
-/* BANNER */
+/* --------------------------------- BANNER --------------------------------- */
 
 .banner {
   background-image: url("../img/funkos-banner\ 1.svg");
   background-size: cover;
-  padding: var(--spacing-128);
+  padding: var(--spacing-128) var(--spacing-12);
 }
 
 .banner__content {
@@ -202,7 +206,12 @@ footer {
   transform: scale(1.2, 1.2);
 }
 
-/* COLECCIONES */
+/* --------------------------------- COLECCIONES --------------------------------- */
+
+main {
+  padding-left: var(--spacing-12);
+  padding-right: var(--spacing-12);
+}
 
 .colecciones {
   display: grid;
@@ -258,7 +267,7 @@ footer {
   transform: scale(1.1, 1.1);
 }
 
-/* NOVEDADES */
+/* --------------------------------- NOVEDADES --------------------------------- */
 
 .novedades {
   display: flex;
@@ -277,7 +286,7 @@ footer {
   gap: var(--spacing-24);
 }
 
-/* CARD-ITEM */
+/* --------------------------------- CARD-ITEM --------------------------------- */
 
 .card-item {
   transition: 0.25s ease-in-out;
@@ -348,7 +357,7 @@ footer {
   color: var(--color-secundario);
 }
 
-/* ANIMATIONS */
+/* --------------------------------- ANIMATIONS --------------------------------- */
 
 @keyframes fade {
   0% {
