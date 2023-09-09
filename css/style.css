@@ -116,7 +116,7 @@ img {
 
 header {
   background-color: var(--background-oscuro);
-  padding: var(--spacing-36) var(--spacing-12);
+  padding: var(--spacing-36) var(--spacing-14);
 }
 
 .navbar {
@@ -135,20 +135,51 @@ header {
   display: inline-block;
   font-size: var(--medium-size-20px);
   padding: var(--spacing-8) var(--spacing-16);
-  border-radius: 1em;
-  transition: 0.18s ease-in;
+  transition: 0.15s ease-in;
 }
 
 .navbar__link:hover {
   background-color: var(--color-primario);
-  transform: scale(1.18, 1.18);
+  transform: scale(1.05, 1.05);
+}
+
+.navbar__desplegable {
+  position: relative;
+}
+
+.navbar__subitem {
+  display: none;
+}
+
+.navbar__desplegable:hover .navbar__subitem {
+  display: block;
+}
+
+.navbar__submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  background-color: var(--background-oscuro);
+}
+
+.navbar__sublink {
+  display: block;
+  font-size: var(--small-size-16px);
+  padding: var(--spacing-8);
+  transition: 0.15s ease-in;
+}
+
+.navbar__sublink:hover {
+  background-color: var(--color-primario);
+  transform: scale(1.02, 1.02);
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
 
 footer {
   background-color: var(--background-oscuro);
-  padding: var(--spacing-68) var(--spacing-12);
+  padding: var(--spacing-68) var(--spacing-14);
   padding-bottom: var(--spacing-8);
 }
 
@@ -168,7 +199,7 @@ footer {
 .banner {
   background-image: url("../img/funkos-banner\ 1.svg");
   background-size: cover;
-  padding: var(--spacing-128) var(--spacing-12);
+  padding: var(--spacing-128) var(--spacing-14);
 }
 
 .banner__content {
@@ -203,14 +234,14 @@ footer {
 
 .banner__link:hover {
   background-color: var(--color-primario);
-  transform: scale(1.2, 1.2);
+  transform: scale(1.08, 1.08);
 }
 
 /* --------------------------------- COLECCIONES --------------------------------- */
 
 main {
-  padding-left: var(--spacing-12);
-  padding-right: var(--spacing-12);
+  padding-left: var(--spacing-14);
+  padding-right: var(--spacing-14);
 }
 
 .colecciones {
@@ -264,7 +295,7 @@ main {
 
 .colecciones__link:hover {
   background-color: var(--color-primario);
-  transform: scale(1.1, 1.1);
+  transform: scale(1.08, 1.08);
 }
 
 /* --------------------------------- NOVEDADES --------------------------------- */
@@ -289,7 +320,7 @@ main {
 /* --------------------------------- CARD-ITEM --------------------------------- */
 
 .card-item {
-  transition: 0.25s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .card-item:hover {
@@ -302,7 +333,7 @@ main {
 }
 
 .card-item__img img {
-  animation: fade 0.7s;
+  animation: fade 0.6s;
 }
 
 .card-item__img--back {
@@ -368,3 +399,56 @@ main {
     opacity: 1;
   }
 }
+
+/* FUTURO MEDIA QUERY */
+
+/* header {
+  background-color: var(--background-oscuro);
+  padding: var(--spacing-36) var(--spacing-12);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
+}
+
+.navbar__link {
+  display: inline-block;
+  font-size: var(--medium-size-20px);
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 1em;
+  transition: 0.18s ease-in;
+}
+
+.navbar__link:hover {
+  background-color: var(--color-primario);
+  transform: scale(1.18, 1.18);
+} */
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+/* footer {
+  background-color: var(--background-oscuro);
+  padding: var(--spacing-68) var(--spacing-12);
+  padding-bottom: var(--spacing-8);
+}
+
+.navbar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: var(--spacing-68);
+} */
+
+/* ------------------------------------------------------------------ CARRITO DE COMPRAS ------------------------------------------------------------------ */
