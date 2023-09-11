@@ -18,9 +18,15 @@
           </a>
         </picture>
 
+        <div class="navbar__icon">
+          <iconify-icon icon="mingcute:menu-line"></iconify-icon>
+        </div>
+
         <ul class="navbar__menu">
           <li class="navbar__item navbar__desplegable">
-            <a class="navbar__link" href="./shop.html">SHOP</a>
+            <a class="navbar__link" href="./shop.html">
+              SHOP <iconify-icon icon="ion:chevron-down-outline"></iconify-icon>
+            </a>
             <ul class="navbar__submenu">
               <li class="navbar__subitem">
                 <a class="navbar__sublink" href="">Funkos</a>
@@ -49,13 +55,13 @@
     </header>
 
     <main>
-      <section class="carrito">
+      <section class="carrito container">
         <h1 class="carrito__title">CARRITO DE COMPRAS</h1>
 
         <div class="carrito__header">
-          <p class="carrito__detail">DETALLE DE PRODUCTO</p>
-          <p class="carrito__cantidad">CANTIDAD</p>
-          <p class="carrito__total">TOTAL</p>
+          <p class="carrito__subtitle">DETALLE DE PRODUCTO</p>
+          <p class="carrito__subtitle">CANTIDAD</p>
+          <p class="carrito__subtitle">TOTAL</p>
         </div>
 
         <ul class="carrito__list">
@@ -77,10 +83,15 @@
               </div>
 
               <div class="cart-item__cantidad">
-                <input type="number" />
+                <input type="number" value="2" />
               </div>
 
-              <p class="cart-item__total">$3599,98</p>
+              <p class="cart-item__total">$ 3599,98</p>
+
+              <iconify-icon
+                class="cart-item__close"
+                icon="zondicons:close-outline"
+              ></iconify-icon>
             </article>
           </li>
 
@@ -102,34 +113,39 @@
               </div>
 
               <div class="cart-item__cantidad">
-                <input type="number" />
+                <input type="number" value="1" />
               </div>
 
-              <p class="cart-item__total">$3599,98</p>
+              <p class="cart-item__total">$ 1799,99</p>
+
+              <iconify-icon
+                class="cart-item__close"
+                icon="zondicons:close-outline"
+              ></iconify-icon>
             </article>
           </li>
         </ul>
       </section>
 
-      <section class="resumen">
+      <section class="resumen container">
         <h2 class="resumen__title">RESUMEN</h2>
 
         <article class="resumen__content">
-          <div class="resumen__cantidad">
+          <div class="resumen__div">
             <p class="resumen__detail">CANTIDAD DE ELEMENTOS</p>
             <p class="resumen__value">3</p>
           </div>
-          <div class="resumen__subtotal">
+          <div class="resumen__div">
             <p class="resumen__detail">SUBTOTAL</p>
-            <p class="resumen__value">$5.5399,97</p>
+            <p class="resumen__value">$ 5.399,97</p>
           </div>
-          <div class="resumen__envio">
+          <div class="resumen__div">
             <p class="resumen__detail">ENVIO</p>
-            <p class="resumen__value">$0,00</p>
+            <p class="resumen__value">$ 0,00</p>
           </div>
-          <div class="resumen__total">
+          <div class="resumen__div resumen__total">
             <p class="resumen__detail">TOTAL</p>
-            <p class="resumen__value">$5.399,97</p>
+            <p class="resumen__value">$ 5.399,97</p>
           </div>
         </article>
 
@@ -167,5 +183,7 @@
         All rights reserved 2023 - Funkoshop &copy;
       </p>
     </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </body>
 </html>
