@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop - Funkoshop</title>
-    <!-- <link rel="stylesheet" href="../../css/style.css" /> -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      rel="icon"
+      href="../../img/branding/isotype.svg"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <picture>
+      <nav class="navbar container">
+        <picture class="navbar__img">
           <a href="../../index.html">
             <img
               src="../../img/branding/logo_light_horizontal.svg"
@@ -18,12 +23,29 @@
           </a>
         </picture>
 
+        <div class="navbar__icon">
+          <iconify-icon icon="mingcute:menu-line"></iconify-icon>
+        </div>
+
         <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a class="navbar__link" href="./shop.html">SHOP</a>
+          <li class="navbar__item navbar__desplegable">
+            <a class="navbar__link" href="./shop.html">
+              SHOP <iconify-icon icon="ion:chevron-down-outline"></iconify-icon>
+            </a>
+            <ul class="navbar__submenu">
+              <li class="navbar__subitem">
+                <a class="navbar__sublink" href="">Funkos</a>
+              </li>
+              <li class="navbar__subitem">
+                <a class="navbar__sublink" href="">Remeras</a>
+              </li>
+              <li class="navbar__subitem">
+                <a class="navbar__sublink" href="">Llaveros</a>
+              </li>
+            </ul>
           </li>
           <li class="navbar__item">
-            <a class="navbar__link" href="./contacto.html">CONTACTO</a>
+            <a class="navbar__link" href="./contacto.html"> CONTACTO </a>
           </li>
           <li class="navbar__item">
             <a class="navbar__link" href="../admin/login.html">LOGIN</a>
@@ -115,8 +137,8 @@
     <main></main>
     <section></section>
     <footer>
-      <nav class="navbar">
-        <ul>
+      <section class="navbar container">
+        <ul class="navbar__footer">
           <li class="navbar__item">
             <a class="navbar__link" href="./shop.html">SHOP</a>
           </li>
@@ -126,21 +148,25 @@
             </a>
           </li>
           <li class="navbar__item">
-            <a class="navbar__link" href="../admin/login.html">LOGIN</a>
+            <a class="navbar__link" href="../admin/login.html">INGRESAR</a>
           </li>
           <li class="navbar__item">
-            <a class="navbar__link" href="./contacto.html">CONTACTO</a>
+            <a class="navbar__link" href="./contacto.html"> CONTACTO </a>
           </li>
         </ul>
 
-        <picture>
+        <picture class="navbar__img">
           <a href="../../index.html">
             <img src="../../img/branding/isotype.svg" alt="Logo Funko Shop" />
           </a>
         </picture>
-      </nav>
+      </section>
 
-      <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
+      <p class="copyright container">
+        All rights reserved 2023 - Funkoshop &copy;
+      </p>
     </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </body>
 </html>

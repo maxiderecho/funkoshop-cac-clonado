@@ -957,6 +957,7 @@ main {
     /* right: 0;
     top: 0; */
     position: static;
+    cursor: pointer;
   }
 
   /* --------------------------------- RESUMEN --------------------------------- */
@@ -1027,6 +1028,7 @@ main {
     /* padding: var(--spacing-12); */
     border: none;
     margin-bottom: var(--spacing-68);
+    cursor: pointer;
   }
 
   /* --------------------------------- ANIMATIONS --------------------------------- */
