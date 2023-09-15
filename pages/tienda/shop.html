@@ -59,83 +59,357 @@
       </nav>
     </header>
 
-    <aside class="filter">
-      <div class="filter__content">
-        <h2 class="filter__title">BUSCAR</h2>
-        <input
-          class="filter__search"
-          type="text"
-          name="search"
-          id="search"
-          placeholder="ítem o categoría"
-        />
-      </div>
+    <div class="shop__container">
+      <div class="shop__content container">
+        <aside class="filter">
+          <div class="filter__content">
+            <label class="filter__title" for="search">BUSCAR</label>
+            <input
+              class="filter__search"
+              type="text"
+              name="search"
+              id="search"
+              placeholder="ítem o categoría"
+            />
+          </div>
 
-      <div class="filter__content">
-        <h2 class="filter__title">ORDENAR POR</h2>
-        <select class="filter__order" name="order" id="order">
-          <option value="mayor">Mayor a menor</option>
-          <option value="menor">Menor a mayor</option>
-        </select>
-      </div>
+          <div class="filter__content">
+            <label class="filter__title" for="order">ORDENAR POR</label>
+            <select class="filter__order" name="order" id="order">
+              <option value="mayor">Mayor a menor</option>
+              <option value="menor">Menor a mayor</option>
+            </select>
+          </div>
 
-      <div class="filter__content">
-        <h2 class="filter__title">PRECIO</h2>
-        <label class="filter__label--min" for="min">MIN</label>
-        <input class="filter__price--min" type="number" name="min" id="min" />
-        <p class="filter__price--divisor">-</p>
-        <label class="filter__label--max" for="max">MAX</label>
-        <input class="filter__price--max" type="number" name="max" id="max" />
-      </div>
+          <div class="filter__content">
+            <h2 class="filter__title">PRECIO</h2>
+            <div class="filter__content--price">
+              <label class="filter__label" for="min">MIN</label>
+              <input
+                class="filter__price"
+                type="number"
+                name="min"
+                id="min"
+                placeholder="0"
+              />
+              <p class="filter__price--divisor">-</p>
+              <label class="filter__label" for="max">MAX</label>
+              <input
+                class="filter__price"
+                type="number"
+                name="max"
+                id="max"
+                placeholder="0"
+              />
+            </div>
+          </div>
 
-      <div class="filter__content">
-        <h2 class="filter__title">FILTRAR</h2>
-        <ul class="filter__list">
-          <li class="filter__checkbox">
-            <input
-              class="filter__checkbox__input"
-              type="checkbox"
-              name="nuevos"
-              id="nuevos"
-            />
-            <label class="filter__checkbox__label" for="nuevos">NUEVOS</label>
-          </li>
-          <li class="filter__checkbox">
-            <input
-              class="filter__checkbox__input"
-              type="checkbox"
-              name="ofertas"
-              id="ofertas"
-            />
-            <label class="filter__checkbox__label" for="ofertas">OFERTAS</label>
-          </li>
-          <li class="filter__checkbox">
-            <input
-              class="filter__checkbox__input"
-              type="checkbox"
-              name="edicion-especial"
-              id="edicion-especial"
-            />
-            <label class="filter__checkbox__label" for="edicion-especial">
-              EDICIÓN ESPECIAL
-            </label>
-          </li>
-          <li class="filter__checkbox">
-            <input
-              class="filter__checkbox__input"
-              type="checkbox"
-              name="favoritos"
-              id="favoritos"
-            />
-            <label class="filter__checkbox__label" for="favoritos">
-              FAVORITOS
-            </label>
-          </li>
-        </ul>
+          <div class="filter__content">
+            <h2 class="filter__title">FILTRAR</h2>
+            <ul class="filter__list">
+              <li class="filter__checkbox">
+                <input
+                  class="filter__checkbox--input"
+                  type="checkbox"
+                  name="nuevos"
+                  id="nuevos"
+                />
+                <label class="filter__checkbox--label" for="nuevos"
+                  >NUEVOS</label
+                >
+              </li>
+
+              <li class="filter__checkbox">
+                <input
+                  class="filter__checkbox--input"
+                  type="checkbox"
+                  name="ofertas"
+                  id="ofertas"
+                />
+                <label class="filter__checkbox--label" for="ofertas">
+                  OFERTAS
+                </label>
+              </li>
+
+              <li class="filter__checkbox">
+                <input
+                  class="filter__checkbox--input"
+                  type="checkbox"
+                  name="edicion-especial"
+                  id="edicion-especial"
+                />
+                <label class="filter__checkbox--label" for="edicion-especial">
+                  EDICIÓN ESPECIAL
+                </label>
+              </li>
+              <li class="filter__checkbox">
+                <input
+                  class="filter__checkbox--input"
+                  type="checkbox"
+                  name="favoritos"
+                  id="favoritos"
+                />
+                <label class="filter__checkbox--label" for="favoritos">
+                  FAVORITOS
+                </label>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="shop">
+          <ul class="shop__list">
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/star-wars/trooper-1.webp"
+                      alt="Stormtrooper Lightsaber"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/star-wars/trooper-box.webp"
+                      alt="Stormtrooper Lightsaber box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">STAR WARS</p>
+                    <h3 class="card-item__name">STORMTROOPER LIGHTSABER</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/pokemon/pidgeotto-1.webp"
+                      alt="Pidgeotto"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/pokemon/pidgeotto-box.webp"
+                      alt="Pidgeotto Box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">POKEMON</p>
+                    <h3 class="card-item__name">PIDGEOTTO</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/harry-potter/luna-1.webp"
+                      alt="Luna Lovegood Lion Mask"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/harry-potter/luna-box.webp"
+                      alt="Luna Lovegood Lion Mask Box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">HARRY POTTER</p>
+                    <h3 class="card-item__name">LUNA LOVEGOOD LION MASK</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+
+          <ul class="shop__list">
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/star-wars/trooper-1.webp"
+                      alt="Stormtrooper Lightsaber"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/star-wars/trooper-box.webp"
+                      alt="Stormtrooper Lightsaber box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">STAR WARS</p>
+                    <h3 class="card-item__name">STORMTROOPER LIGHTSABER</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/pokemon/pidgeotto-1.webp"
+                      alt="Pidgeotto"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/pokemon/pidgeotto-box.webp"
+                      alt="Pidgeotto Box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">POKEMON</p>
+                    <h3 class="card-item__name">PIDGEOTTO</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/harry-potter/luna-1.webp"
+                      alt="Luna Lovegood Lion Mask"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/harry-potter/luna-box.webp"
+                      alt="Luna Lovegood Lion Mask Box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">HARRY POTTER</p>
+                    <h3 class="card-item__name">LUNA LOVEGOOD LION MASK</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+
+          <ul class="shop__list">
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/star-wars/trooper-1.webp"
+                      alt="Stormtrooper Lightsaber"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/star-wars/trooper-box.webp"
+                      alt="Stormtrooper Lightsaber box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">STAR WARS</p>
+                    <h3 class="card-item__name">STORMTROOPER LIGHTSABER</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/pokemon/pidgeotto-1.webp"
+                      alt="Pidgeotto"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/pokemon/pidgeotto-box.webp"
+                      alt="Pidgeotto Box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">POKEMON</p>
+                    <h3 class="card-item__name">PIDGEOTTO</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="shop__item">
+              <article class="card-item">
+                <a class="card-item__link" href="./pages/tienda/item.html">
+                  <picture class="card-item__img">
+                    <span class="card-item__tag">NUEVO</span>
+                    <img
+                      class="card-item__img--front"
+                      src="../../img/harry-potter/luna-1.webp"
+                      alt="Luna Lovegood Lion Mask"
+                    />
+                    <img
+                      class="card-item__img--back"
+                      src="../../img/harry-potter/luna-box.webp"
+                      alt="Luna Lovegood Lion Mask Box"
+                    />
+                  </picture>
+
+                  <div class="card-item__content">
+                    <p class="card-item__license">HARRY POTTER</p>
+                    <h3 class="card-item__name">LUNA LOVEGOOD LION MASK</h3>
+                    <p class="card-item__price">$ 1799,99</p>
+                    <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </main>
       </div>
-    </aside>
-    <main></main>
-    <section></section>
+    </div>
+
     <footer>
       <section class="navbar container">
         <ul class="navbar__footer">

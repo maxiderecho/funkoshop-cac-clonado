@@ -153,7 +153,7 @@ header {
 
 footer {
   background-color: var(--background-oscuro);
-  padding: var(--spacing-20) var(--spacing-14) var(--spacing-8);
+  padding: var(--spacing-24) var(--spacing-14) var(--spacing-8);
 }
 
 .navbar__footer {
@@ -176,11 +176,9 @@ footer .navbar__img {
   text-align: center;
 }
 
-/* --------------------------------- BANNER - HOME --------------------------------- */
+/* ------------------------------------------------ HOME ------------------------------------------------ */
 
-main {
-  padding: var(--spacing-14);
-}
+/* --------------------------------- BANNER --------------------------------- */
 
 .banner {
   background-image: url(../img/funkos-banner\ 1.svg);
@@ -221,6 +219,10 @@ main {
 
 /* --------------------------------- COLECCIONES --------------------------------- */
 
+.home {
+  padding: var(--spacing-14);
+}
+
 .colecciones {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -235,7 +237,6 @@ main {
 .colecciones__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: var(--spacing-8);
 }
 
@@ -282,30 +283,30 @@ main {
 
 .novedades__list {
   display: flex;
-  justify-content: space-between;
+  gap: 1em;
+  overflow: scroll;
+  padding: 0.2em;
+}
+
+.novedades__list::-webkit-scrollbar {
+  width: 0;
 }
 
 /* --------------------------------- CARD-ITEM --------------------------------- */
 
 .card-item {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  width: 30vw;
-  gap: 0.4rem;
-  box-shadow: 0px 0px 3px 0px #00000040;
-}
-
-.card-item__img {
-  width: 9.5em;
+  width: 55vw;
+  gap: 0.5em;
+  box-shadow: 0px 0px 5px 0px #00000040;
 }
 
 .card-item__tag {
   background-color: var(--color-primario);
   color: var(--color-fuente-claro);
-  font-size: 1.6vw;
+  font-size: 1em;
   font-weight: 500;
-  padding: 0.2rem 0.45rem;
+  padding: 0.2rem 0.6rem;
   position: absolute;
   right: 0;
 }
@@ -317,15 +318,14 @@ main {
 .card-item__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: var(--spacing-4);
-  padding: var(--spacing-4);
+  gap: var(--spacing-8);
+  padding: var(--spacing-8);
 }
 
 .card-item__license {
   color: var(--color-fuente-gris);
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 500;
   max-height: 1.2rem;
   max-width: 100%;
@@ -335,7 +335,7 @@ main {
 }
 
 .card-item__name {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   max-height: 1.2rem;
   max-width: 100%;
@@ -346,17 +346,23 @@ main {
 
 .card-item__price {
   color: var(--color-fuente-gris);
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 400;
 }
 
 .card-item__offer {
   color: var(--color-secundario);
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: 700;
 }
 
+/* ------------------------------------------------ CARRITO DE COMPRAS ------------------------------------------------ */
+
 /* --------------------------------- CARRITO --------------------------------- */
+
+.cart {
+  padding: var(--spacing-14);
+}
 
 .carrito {
   display: flex;
@@ -512,6 +518,45 @@ main {
   border: none;
 }
 
+@media screen and (width < 1024px) {
+  /* ------------------------------------------------ SHOP ------------------------------------------------ */
+
+  /* --------------------------------- FILTRO --------------------------------- */
+
+  .filter {
+    display: none;
+  }
+
+  /* --------------------------------- SHOP --------------------------------- */
+
+  .shop__container {
+    padding: var(--spacing-14);
+  }
+
+  .shop__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .shop__item .card-item {
+    width: 100%;
+  }
+
+  .shop__item .card-item__link {
+    display: flex;
+    align-items: center;
+  }
+
+  .shop__item .card-item__img {
+    max-width: 40%;
+  }
+
+  .shop__item .card-item__content {
+    width: 60%;
+  }
+}
+
 /* ----------------------------------------------------------- DESKTOP SCREEN - MEDIA QUERY ----------------------------------------------------------- */
 
 @media screen and (min-width: 1024px) {
@@ -610,10 +655,6 @@ main {
 
   /* --------------------------------- BANNER --------------------------------- */
 
-  /* main {
-    padding: var(--spacing-14);
-    } */
-
   .banner {
     /* background-image: url("../img/funkos-banner\ 1.svg");
     background-size: cover; */
@@ -661,6 +702,10 @@ main {
   }
 
   /* --------------------------------- COLECCIONES --------------------------------- */
+
+  /* .home {
+    padding: var(--spacing-14);
+  } */
 
   .colecciones {
     /* display: grid;
@@ -742,23 +787,21 @@ main {
   /* --------------------------------- CARD-ITEM --------------------------------- */
 
   .card-item {
-    display: inline-block;
-    /* flex-direction: column; */
     position: static;
-    width: auto;
+    width: 100%;
     /* gap: 0.4rem; */
     /* box-shadow: 0px 0px 3px 0px #00000040; */
     transition: 0.2s ease-in-out;
   }
 
   .card-item:hover {
-    box-shadow: 0px 0px 6px 0px #00000040;
+    box-shadow: 0px 0px 10px 0px #00000040;
   }
 
   .card-item__img {
     display: flex;
     position: relative;
-    width: auto;
+    /* width: auto; */
   }
 
   .card-item__img img {
@@ -782,7 +825,7 @@ main {
     color: var(--color-fuente-claro); */
     font-size: var(--xsmall-size-14px);
     /* font-weight: 500; */
-    padding: var(--spacing-8) var(--spacing-24);
+    padding: var(--spacing-8) var(--spacing-20);
     position: absolute;
     right: 0;
   }
@@ -830,6 +873,11 @@ main {
   }
 
   /* --------------------------------- CARRITO --------------------------------- */
+
+  .cart {
+    padding: var(--spacing-14);
+  }
+
   .carrito {
     /* display: flex;
     flex-direction: column;
@@ -1029,6 +1077,120 @@ main {
     border: none;
     margin-bottom: var(--spacing-68);
     cursor: pointer;
+  }
+
+  /* ------------------------------------------------ SHOP ------------------------------------------------ */
+
+  .shop__container {
+    padding: var(--spacing-36) var(--spacing-14);
+  }
+
+  .shop__content {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-14);
+  }
+
+  /* --------------------------------- FILTRO --------------------------------- */
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    gap: var(--spacing-14);
+    /* padding-right: var(--spacing-12); */
+  }
+
+  .filter__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+  }
+
+  .filter__title {
+    font-size: var(--medium-size-20px);
+    font-weight: 500;
+  }
+
+  .filter__search {
+    padding: var(--spacing-8);
+    font-size: var(--small-size-16px);
+    font-weight: 500;
+    border-radius: 6px;
+    border: 2px solid var(--background-oscuro);
+  }
+
+  .filter__order {
+    padding: var(--spacing-8);
+    font-size: var(--small-size-16px);
+    font-weight: 500;
+    border-radius: 6px;
+    border: 2px solid var(--background-oscuro);
+  }
+
+  .filter__content--price {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: var(--spacing-4);
+    align-items: baseline;
+  }
+
+  .filter__label {
+    font-size: var(--xsmall-size-14px);
+  }
+
+  .filter__price {
+    max-width: 2.5em;
+    font-size: var(--small-size-16px);
+    text-align: center;
+    padding: 0 var(--spacing-4);
+    border-radius: 6px;
+    border: 2px solid var(--background-oscuro);
+  }
+
+  .filter__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+
+  .filter__checkbox--input {
+    font-size: var(--small-size-16px);
+  }
+
+  .filter__checkbox--label {
+    font-size: var(--small-size-16px);
+    font-weight: 500;
+  }
+
+  /* --------------------------------- SHOP --------------------------------- */
+
+  .shop {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+  }
+
+  .shop__list {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    gap: var(--spacing-12);
+  }
+
+  .shop__item {
+    min-width: 30%;
+  }
+
+  .shop__item .card-item__tag {
+    /* background-color: var(--color-primario);
+    color: var(--color-fuente-claro); */
+    font-size: 1em;
+    /* font-weight: 500; */
+    padding: var(--spacing-8) var(--spacing-16);
+    /* position: absolute;
+    right: 0; */
   }
 
   /* --------------------------------- ANIMATIONS --------------------------------- */
