@@ -616,6 +616,7 @@ footer .navbar__img {
     flex-direction: column;
     position: absolute;
     left: 0;
+    z-index: 5;
     background-color: var(--background-oscuro);
   }
 
