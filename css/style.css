@@ -89,10 +89,6 @@ a {
   color: inherit;
 }
 
-p {
-  font-size: var(--medium-size-18px);
-}
-
 ul,
 ol {
   list-style-type: none; /* Elimina el icono o número que agregan las listas */
@@ -122,31 +118,68 @@ input {
 /* --------------------------------- HEADER --------------------------------- */
 
 header {
-  background-color: var(--background-oscuro);
-  padding: var(--spacing-14);
+  padding-bottom: 5.8em;
 }
 
-.navbar {
+header .navbar {
+  background-color: var(--background-oscuro);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
+
+/* Al poner el header fixed y compartir clase con el navbar del footer tuve que acceder a la clase .navbar desde la etiqueta header.*/
 
 .navbar__img {
   width: 20rem;
+  margin-left: var(--spacing-14);
 }
 
 .navbar__icon {
   cursor: pointer;
   font-size: var(--large-size-24px);
+  padding: var(--spacing-14);
 }
 
 .navbar__menu {
   display: none;
+  position: absolute;
+  background-color: var(--background-oscuro);
+  top: 5rem;
+  width: 100%;
+  padding: var(--spacing-14);
 }
 
-.navbar__icon:active ~ .navbar__menu {
+.navbar__menu.show-menu {
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-14);
+}
+
+.navbar__link {
+  display: inline-block;
+  font-size: var(--small-size-16px);
+  line-height: var(--spacing-20);
+}
+
+.navbar__cart {
+  display: inline-block;
+  width: var(--spacing-28);
+}
+
+.navbar__submenu {
+  display: none;
+}
+
+.navbar__sublink {
+  display: none;
+}
+
+.navbar__shop--chevron {
+  display: none;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
@@ -156,13 +189,19 @@ footer {
   padding: var(--spacing-24) var(--spacing-14) var(--spacing-8);
 }
 
+footer .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar__footer {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-8);
 }
 
-.navbar__link {
+.navbar__footer .navbar__link {
   font-size: var(--xxsmall-size-12px);
 }
 
@@ -183,7 +222,7 @@ footer .navbar__img {
 .banner {
   background-image: url(../img/funkos-banner\ 1.svg);
   background-size: cover;
-  padding: var(--spacing-14);
+  padding: var(--spacing-20) var(--spacing-14);
 }
 
 .banner__content {
@@ -563,34 +602,47 @@ footer .navbar__img {
   /* --------------------------------- HEADER --------------------------------- */
 
   header {
-    /* background-color: var(--background-oscuro); */
+    background-color: var(--background-oscuro);
     padding: var(--spacing-36) var(--spacing-14);
-    /* Agrego un padding mayor arriba y abajo */
+    /* Agrego un padding arriba y abajo */
   }
 
-  /* .navbar {
-    display: flex;
+  header .navbar {
+    /* background-color: var(--background-oscuro); */
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
-  } */
+    align-items: center; */
+    position: relative;
+    width: auto;
+    /* z-index: 10; */
+  }
 
   .navbar__img {
     width: 35rem;
+    margin-left: 0;
   }
 
   .navbar__icon {
     display: none;
+    /* cursor: pointer;
+    font-size: var(--large-size-24px);
+    padding: var(--spacing-14); */
   }
 
   .navbar__menu {
     display: flex;
     align-items: center;
+    position: relative;
+    top: auto;
+    width: auto;
+    padding: 0;
     gap: var(--spacing-20);
   }
 
   .navbar__link {
-    display: inline-block;
+    /* display: inline-block; */
     font-size: var(--medium-size-20px);
+    line-height: auto;
     padding: var(--spacing-8) var(--spacing-16);
     transition: 0.2s ease-in-out;
   }
@@ -631,6 +683,15 @@ footer .navbar__img {
     background-color: var(--color-primario-90);
   }
 
+  .navbar__shop--chevron {
+    display: inline-block;
+  }
+
+  .navbar__cart {
+    /* display: inline-block; */
+    width: 100%;
+  }
+
   /* --------------------------------- FOOTER --------------------------------- */
 
   footer {
@@ -638,11 +699,23 @@ footer .navbar__img {
     padding: var(--spacing-68) var(--spacing-14) var(--spacing-8);
   }
 
+  /* footer .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
   /* .navbar__footer {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-8);
   } */
+
+  .navbar__footer .navbar__link {
+    font-size: var(--medium-size-20px);
+  }
+
+  /* Al haber hecho la medida del navbar__link para mobile y en especial para el header, tuve que acceder al navbar__link desde el navbar__footer. */
 
   footer .navbar__img {
     width: 14.3rem;
