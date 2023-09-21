@@ -118,7 +118,7 @@ input {
 /* --------------------------------- HEADER --------------------------------- */
 
 header {
-  padding-bottom: 5.8em;
+  padding-bottom: 6.1rem;
 }
 
 header .navbar {
@@ -141,14 +141,14 @@ header .navbar {
 .navbar__icon {
   cursor: pointer;
   font-size: var(--large-size-24px);
-  padding: var(--spacing-14);
+  padding: var(--spacing-16) var(--spacing-14);
 }
 
 .navbar__menu {
   display: none;
   position: absolute;
   background-color: var(--background-oscuro);
-  top: 5rem;
+  top: 6.1rem;
   width: 100%;
   padding: var(--spacing-14);
 }
@@ -222,7 +222,7 @@ footer .navbar__img {
 .banner {
   background-image: url(../img/funkos-banner\ 1.svg);
   background-size: cover;
-  padding: var(--spacing-20) var(--spacing-14);
+  padding: var(--spacing-24) var(--spacing-14);
 }
 
 .banner__content {
@@ -570,6 +570,12 @@ footer .navbar__img {
 
   .shop__container {
     padding: var(--spacing-14);
+  }
+
+  .shop {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 
   .shop__list {
