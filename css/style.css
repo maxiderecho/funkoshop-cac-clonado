@@ -580,6 +580,15 @@ footer .navbar__img {
     font-size: var(--xsmall-size-14px);
     font-weight: 500;
     text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+  }
+
+  .filter__button--icon {
+    transition: 0.1s linear;
+  }
+
+  .filter__button--rotate {
+    transform: rotate(180deg);
   }
 
   .filter__title {
