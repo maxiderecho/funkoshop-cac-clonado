@@ -67,6 +67,12 @@
       <div class="shop__content container">
         <aside class="filter">
           <div class="filter__content">
+            <label class="filter__search--icon" for="search">
+              <img
+                src="../../img/icons/search_icon.svg"
+                alt="Ícono de búsqueda"
+              />
+            </label>
             <label class="filter__title" for="search">BUSCAR</label>
             <input
               class="filter__search"
@@ -75,89 +81,96 @@
               id="search"
               placeholder="ítem o categoría"
             />
+
+            <a class="filter__button">
+              Filtros
+              <iconify-icon icon="ion:chevron-down-outline"></iconify-icon>
+            </a>
           </div>
 
-          <div class="filter__content">
-            <label class="filter__title" for="order">ORDENAR POR</label>
-            <select class="filter__order" name="order" id="order">
-              <option value="mayor">Mayor a menor</option>
-              <option value="menor">Menor a mayor</option>
-            </select>
-          </div>
-
-          <div class="filter__content">
-            <h2 class="filter__title">PRECIO</h2>
-            <div class="filter__content--price">
-              <label class="filter__label" for="min">MIN</label>
-              <input
-                class="filter__price"
-                type="number"
-                name="min"
-                id="min"
-                placeholder="0"
-              />
-              <p class="filter__price--divisor">-</p>
-              <label class="filter__label" for="max">MAX</label>
-              <input
-                class="filter__price"
-                type="number"
-                name="max"
-                id="max"
-                placeholder="0"
-              />
+          <div class="filter__content--desplegable">
+            <div class="filter__content">
+              <label class="filter__title" for="order">ORDENAR POR</label>
+              <select class="filter__order" name="order" id="order">
+                <option value="mayor">Mayor a menor</option>
+                <option value="menor">Menor a mayor</option>
+              </select>
             </div>
-          </div>
 
-          <div class="filter__content">
-            <h2 class="filter__title">FILTRAR</h2>
-            <ul class="filter__list">
-              <li class="filter__checkbox">
+            <div class="filter__content">
+              <h2 class="filter__title">PRECIO</h2>
+              <div class="filter__content--price">
+                <label class="filter__label" for="min">MIN</label>
                 <input
-                  class="filter__checkbox--input"
-                  type="checkbox"
-                  name="nuevos"
-                  id="nuevos"
+                  class="filter__price"
+                  type="number"
+                  name="min"
+                  id="min"
+                  placeholder="0"
                 />
-                <label class="filter__checkbox--label" for="nuevos"
-                  >NUEVOS</label
-                >
-              </li>
+                <p class="filter__price--divisor">-</p>
+                <label class="filter__label" for="max">MAX</label>
+                <input
+                  class="filter__price"
+                  type="number"
+                  name="max"
+                  id="max"
+                  placeholder="0"
+                />
+              </div>
+            </div>
 
-              <li class="filter__checkbox">
-                <input
-                  class="filter__checkbox--input"
-                  type="checkbox"
-                  name="ofertas"
-                  id="ofertas"
-                />
-                <label class="filter__checkbox--label" for="ofertas">
-                  OFERTAS
-                </label>
-              </li>
+            <div class="filter__content">
+              <h2 class="filter__title">FILTRAR</h2>
+              <ul class="filter__list">
+                <li class="filter__checkbox">
+                  <input
+                    class="filter__checkbox--input"
+                    type="checkbox"
+                    name="nuevos"
+                    id="nuevos"
+                  />
+                  <label class="filter__checkbox--label" for="nuevos"
+                    >NUEVOS</label
+                  >
+                </li>
 
-              <li class="filter__checkbox">
-                <input
-                  class="filter__checkbox--input"
-                  type="checkbox"
-                  name="edicion-especial"
-                  id="edicion-especial"
-                />
-                <label class="filter__checkbox--label" for="edicion-especial">
-                  EDICIÓN ESPECIAL
-                </label>
-              </li>
-              <li class="filter__checkbox">
-                <input
-                  class="filter__checkbox--input"
-                  type="checkbox"
-                  name="favoritos"
-                  id="favoritos"
-                />
-                <label class="filter__checkbox--label" for="favoritos">
-                  FAVORITOS
-                </label>
-              </li>
-            </ul>
+                <li class="filter__checkbox">
+                  <input
+                    class="filter__checkbox--input"
+                    type="checkbox"
+                    name="ofertas"
+                    id="ofertas"
+                  />
+                  <label class="filter__checkbox--label" for="ofertas">
+                    OFERTAS
+                  </label>
+                </li>
+
+                <li class="filter__checkbox">
+                  <input
+                    class="filter__checkbox--input"
+                    type="checkbox"
+                    name="edicion-especial"
+                    id="edicion-especial"
+                  />
+                  <label class="filter__checkbox--label" for="edicion-especial">
+                    EDICIÓN ESPECIAL
+                  </label>
+                </li>
+                <li class="filter__checkbox">
+                  <input
+                    class="filter__checkbox--input"
+                    type="checkbox"
+                    name="favoritos"
+                    id="favoritos"
+                  />
+                  <label class="filter__checkbox--label" for="favoritos">
+                    FAVORITOS
+                  </label>
+                </li>
+              </ul>
+            </div>
           </div>
         </aside>
 
