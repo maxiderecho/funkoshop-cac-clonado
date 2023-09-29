@@ -63,8 +63,8 @@
       </nav>
     </header>
 
-    <main>
-      <section class="item">
+    <main class="item__page">
+      <section class="item container">
         <picture class="item__img">
           <img
             src="../../img/star-wars/baby-yoda-1.webp"
@@ -79,8 +79,9 @@
             Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga,
             edición limitada.
           </p>
-          <p class="item__price">$1799,99</p>
-          <div class="item__carrito">
+          <p class="item__price">$ 1799,99</p>
+
+          <div class="item__carrito--article">
             <input class="item__cantidad" type="number" placeholder="0" />
             <input
               class="item__add-cart"
@@ -88,23 +89,53 @@
               value="Agregar al Carrito"
             />
           </div>
-          <a class="item__pago" href="">
-            Ver métodos de pago - 3 CUOTAS SIN INTERÉS
+
+          <a class="item__pago--article" href="">
+            <span class="item__pago--border">Ver métodos de pago</span> - 3
+            CUOTAS SIN INTERÉS
           </a>
         </article>
+
+        <div class="item__carrito">
+          <input
+            class="item__cantidad"
+            type="number"
+            name="cantidad-item"
+            id="cantidad-item"
+            placeholder="0"
+          />
+          <input
+            class="item__add-cart"
+            type="button"
+            name="cantidad-button"
+            id="cantidad-button"
+            value="Agregar al Carrito"
+          />
+        </div>
+
+        <a class="item__pago" href="">
+          <span class="item__pago--border">Ver métodos de pago</span> - 3 CUOTAS
+          SIN INTERÉS
+        </a>
       </section>
 
-      <section class="novedades">
-        <h2 class="novedades__title">ÚLTIMOS LANZAMIENTOS</h2>
+      <section class="novedades container">
+        <h3 class="novedades__title">PRODUCTOS RELACIONADOS</h3>
         <ul class="novedades__list">
           <li class="novedades__item">
             <article class="card-item">
-              <a class="card-item__link" href="/pages/tienda/item.html">
+              <a class="card-item__link" href="./item.html">
                 <picture class="card-item__img">
                   <span class="card-item__tag">NUEVO</span>
                   <img
-                    src="/img/star-wars/trooper-1.webp"
-                    alt="Stormtrooper lightsaber"
+                    class="card-item__img--front"
+                    src="../../img/star-wars/trooper-1.webp"
+                    alt="Stormtrooper Lightsaber"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="../../img/star-wars/trooper-box.webp"
+                    alt="Stormtrooper Lightsaber box"
                   />
                 </picture>
                 <div class="card-item__content">
@@ -119,10 +150,19 @@
 
           <li class="novedades__item">
             <article class="card-item">
-              <a class="card-item__link" href="/pages/tienda/item.html">
+              <a class="card-item__link" href="./item.html">
                 <picture class="card-item__img">
                   <span class="card-item__tag">NUEVO</span>
-                  <img src="/img/pokemon/pidgeotto-1.webp" alt="Pidgeotto" />
+                  <img
+                    class="card-item__img--front"
+                    src="../../img/pokemon/pidgeotto-1.webp"
+                    alt="Pidgeotto"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="../../img/pokemon/pidgeotto-box.webp"
+                    alt="Pidgeotto Box"
+                  />
                 </picture>
                 <div class="card-item__content">
                   <p class="card-item__license">POKEMON</p>
@@ -136,12 +176,18 @@
 
           <li class="novedades__item">
             <article class="card-item">
-              <a class="card-item__link" href="/pages/tienda/item.html">
+              <a class="card-item__link" href="./item.html">
                 <picture class="card-item__img">
                   <span class="card-item__tag">NUEVO</span>
                   <img
-                    src="/img/harry-potter/luna-1.webp"
+                    class="card-item__img--front"
+                    src="../../img/harry-potter/luna-1.webp"
                     alt="Luna Lovegood Lion Mask"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="../../img/harry-potter/luna-box.webp"
+                    alt="Luna Lovegood Lion Mask Box"
                   />
                 </picture>
                 <div class="card-item__content">
