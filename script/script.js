@@ -7,6 +7,10 @@ navbarIcon.addEventListener("click", () => {
   navbarMenu.classList.toggle("show-menu");
 });
 
+document.addEventListener("scroll", () => {
+  navbarMenu.classList.remove("show-menu");
+});
+
 //  Filtro desplegable en el shop para versión mobile.
 
 const filterButton = document.querySelector(".filter__button");
