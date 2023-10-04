@@ -1152,7 +1152,10 @@ td {
   align-items: center;
   gap: var(--spacing-20);
   padding: var(--spacing-28) var(--spacing-14);
+  min-height: 60vh;
 }
+
+/* El min-height es para que no haya espacios en blanco debajo del footer en mobile. */
 
 .login__title {
   font-family: var(--fuente-alternativa);
