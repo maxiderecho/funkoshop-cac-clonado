@@ -118,7 +118,7 @@ input {
 /* --------------------------------- HEADER --------------------------------- */
 
 header {
-  padding-bottom: 6.1rem;
+  padding-bottom: 6.9rem;
 }
 
 header .navbar {
@@ -141,7 +141,7 @@ header .navbar {
 .navbar__icon {
   cursor: pointer;
   font-size: var(--large-size-24px);
-  padding: var(--spacing-16) var(--spacing-14);
+  padding: var(--spacing-20) var(--spacing-14);
 }
 
 .navbar__menu {
@@ -186,7 +186,7 @@ header .navbar {
 
 footer {
   background-color: var(--background-oscuro);
-  padding: var(--spacing-24) var(--spacing-14) var(--spacing-8);
+  padding: var(--spacing-36) var(--spacing-14) var(--spacing-12);
 }
 
 footer .navbar {
@@ -202,7 +202,7 @@ footer .navbar {
 }
 
 .navbar__footer .navbar__link {
-  font-size: var(--xxsmall-size-12px);
+  font-size: 1.3em;
 }
 
 footer .navbar__img {
@@ -210,7 +210,7 @@ footer .navbar__img {
 }
 
 .copyright {
-  padding-top: var(--spacing-24);
+  padding-top: var(--spacing-36);
   font-size: var(--xxsmall-size-12px);
   text-align: center;
 }
@@ -1151,28 +1151,28 @@ td {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-20);
-  padding: var(--spacing-28) var(--spacing-14);
-  min-height: 60vh;
+  padding: var(--spacing-36) var(--spacing-14);
+  min-height: 100%;
 }
 
 /* El min-height es para que no haya espacios en blanco debajo del footer en mobile. */
 
 .login__title {
   font-family: var(--fuente-alternativa);
-  font-size: var(--medium-size-18px);
+  font-size: var(--medium-size-20px);
   font-weight: 700;
 }
 
 .login__form {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-16);
+  gap: var(--spacing-20);
 }
 
 .login__list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-14);
+  gap: var(--spacing-20);
 }
 
 .login__content {
@@ -1183,7 +1183,7 @@ td {
 }
 
 .login__label {
-  font-size: var(--xsmall-size-14px);
+  font-size: var(--small-size-16px);
   font-weight: 400;
 }
 
