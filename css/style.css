@@ -3,7 +3,7 @@
 /* --------------------------------- Variables --------------------------------- */
 
 :root {
-  /* :root y html son dos selectores que seleccionan el elemento raíz del documento */
+  /* :root y html son dos selectores que representan el elemento raíz del documento */
   /* :root lo utilizo para declarar las variables */
   /* html lo utilizo para hacer normalizaciones */
 
@@ -794,6 +794,115 @@ footer .navbar__img {
 
 .item__pago--border {
   border-bottom: 0.5px solid var(--color-secundario);
+}
+
+/* ------------------------------------------------ ADMIN ------------------------------------------------ */
+/* --------------------------------- BUSCADOR --------------------------------- */
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-14);
+  padding-bottom: 0;
+}
+
+.buscador__icon {
+  max-width: 2.3rem;
+}
+
+.buscador__search {
+  padding: var(--spacing-4) var(--spacing-12);
+  border: 1px solid var(--background-oscuro);
+  border-radius: 6px;
+}
+
+/* --------------------------------- PRODUCTOS --------------------------------- */
+
+.productos {
+  padding: var(--spacing-14);
+}
+
+.productos__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-14);
+  max-width: 500px;
+}
+
+/* Agrego un max-width para que el ancho del header */
+/* no sobrepase el width total de la tabla. */
+
+.productos__title {
+  font-size: var(--small-size-16px);
+  font-weight: 700;
+}
+
+.productos__add {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.productos__add--icon {
+  font-size: var(--small-size-16px);
+  color: var(--color-primario);
+}
+
+.productos__list {
+  overflow-x: auto;
+}
+
+.productos__table {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+/* La tabla consigue un width máximo de 500px */
+/* Al usar la tabla con overflow y no de manera responsive */
+/* indico un ancho absoluto. */
+
+.productos__table th,
+td {
+  text-align: left;
+  font-size: var(--xxsmall-size-12px);
+  padding: var(--spacing-4) var(--spacing-8);
+}
+
+.productos__table th {
+  font-weight: 700;
+  padding-bottom: var(--spacing-8);
+}
+
+.productos__table td {
+  font-weight: 500;
+}
+
+/* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+.productos__head th:first-child {
+  text-align: center;
+}
+
+.productos__content td:first-child {
+  text-align: center;
+}
+
+/* Alineo a la derecha el último elemento (delete-icon) y */
+/* elimino su padding para que quede alineado con el */
+/* add icon del header en caso de llegar a su máximo width. */
+
+.productos__content td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.productos__icon {
+  max-width: 2rem;
 }
 
 /* ----------------------------------------------------------- DESKTOP SCREEN - MEDIA QUERY ----------------------------------------------------------- */
