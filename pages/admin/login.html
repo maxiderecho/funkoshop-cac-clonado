@@ -42,7 +42,7 @@
     </header>
 
     <main>
-      <section class="login">
+      <section class="login container">
         <h1 class="login__title">INGRESAR A MI CUENTA</h1>
 
         <form class="login__form" action="" method="post">
@@ -70,18 +70,20 @@
             </li>
           </ul>
 
-          <input class="login__button" type="button" value="Ingresar" />
+          <div class="login__enter">
+            <input class="login__button" type="button" value="Ingresar" />
 
-          <div class="login__checkbox">
-            <input
-              class="login__checkbox--input"
-              type="checkbox"
-              name="recordarme"
-              id="recordarme"
-            />
-            <label class="login__checkbox--label" for="recordarme">
-              Recordarme
-            </label>
+            <div class="login__checkbox">
+              <input
+                class="login__checkbox--input"
+                type="checkbox"
+                name="recordarme"
+                id="recordarme"
+              />
+              <label class="login__checkbox--label" for="recordarme">
+                Recordarme
+              </label>
+            </div>
           </div>
         </form>
 

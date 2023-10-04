@@ -565,7 +565,7 @@ footer .navbar__img {
   .filter {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-8);
+    gap: var(--spacing-12);
   }
 
   .filter__search--icon {
@@ -638,6 +638,7 @@ footer .navbar__img {
     padding: var(--spacing-4);
     border-radius: 6px;
     border: 2px solid var(--background-oscuro);
+    background-color: #ffffff;
   }
 
   .filter__content--price {
@@ -1138,6 +1139,252 @@ td {
 
   .productos__icon {
     max-width: 4rem;
+  }
+}
+
+/* ------------------------------------------------------- LOGIN ------------------------------------------------------- */
+
+/* ---------------------------------------- VERSIÓN MOBILE ---------------------------------------- */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-20);
+  padding: var(--spacing-28) var(--spacing-14);
+}
+
+.login__title {
+  font-family: var(--fuente-alternativa);
+  font-size: var(--medium-size-18px);
+  font-weight: 700;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.login__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-14);
+}
+
+.login__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-12);
+}
+
+.login__label {
+  font-size: var(--xsmall-size-14px);
+  font-weight: 400;
+}
+
+.login__input {
+  font-size: var(--xxsmall-size-12px);
+  border: 0;
+  border-bottom: 1px solid var(--color-primario);
+  padding: var(--spacing-2);
+}
+
+.login__enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-14);
+}
+
+.login__button {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+  color: var(--color-fuente-claro);
+  background-color: var(--color-primario);
+  border: 0;
+  padding: var(--spacing-8) var(--spacing-16);
+}
+
+.login__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.login__checkbox--label {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+}
+
+.login__olvidar {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+  color: var(--color-secundario);
+}
+
+/* ---------------------------------------- VERSIÓN TABLET ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .login {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: var(--spacing-24);
+    /* padding: var(--spacing-28) var(--spacing-14); */
+  }
+
+  .login__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  .login__form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-20);
+  }
+
+  .login__list {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-20);
+  }
+
+  .login__content {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+    gap: var(--spacing-14);
+  }
+
+  .login__label {
+    font-size: var(--small-size-16px);
+    /* font-weight: 400; */
+  }
+
+  .login__input {
+    font-size: var(--xsmall-size-14px);
+    /* border: 0; */
+    border-bottom: 2px solid var(--color-primario);
+    padding: var(--spacing-4) 0;
+  }
+
+  .login__enter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: var(--spacing-16);
+  }
+
+  /* .login__button {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+    color: var(--color-fuente-claro);
+    background-color: var(--color-primario);
+    border: 0;
+    padding: var(--spacing-8) var(--spacing-16);
+  } */
+
+  .login__checkbox {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-8);
+  }
+
+  /* .login__checkbox--label {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+  } */
+
+  /* .login__olvidar {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+    color: var(--color-secundario);
+  } */
+}
+
+/* ---------------------------------------- VERSIÓN DESKTOP ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .login {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: var(--spacing-28);
+    padding: var(--spacing-36) var(--spacing-14);
+  }
+
+  .login__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .login__form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-28);
+  }
+
+  .login__list {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-28);
+  }
+
+  .login__content {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+    gap: var(--spacing-14);
+  }
+
+  .login__label {
+    font-size: var(--large-size-24px);
+    /* font-weight: 400; */
+  }
+
+  .login__input {
+    font-size: var(--small-size-16px);
+    /* border: 0; */
+    border-bottom: 2px solid var(--color-primario);
+    padding: var(--spacing-4) 0;
+  }
+
+  .login__enter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: var(--spacing-36);
+  }
+
+  .login__button {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-claro); */
+    /* background-color: var(--color-primario); */
+    /* border: 0; */
+    padding: var(--spacing-8) var(--spacing-24);
+  }
+
+  .login__checkbox {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-8);
+  }
+
+  .login__checkbox--label {
+    font-size: var(--medium-size-18px);
+    /* font-weight: 400; */
+  }
+
+  .login__olvidar {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 400; */
+    /* color: var(--color-secundario); */
   }
 }
 
@@ -1758,6 +2005,7 @@ td {
     font-weight: 500;
     border-radius: 6px;
     border: 2px solid var(--background-oscuro);
+    background-color: #ffffff;
   }
 
   .filter__content--price {
