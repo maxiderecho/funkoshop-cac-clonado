@@ -796,8 +796,11 @@ footer .navbar__img {
   border-bottom: 0.5px solid var(--color-secundario);
 }
 
-/* ------------------------------------------------ ADMIN ------------------------------------------------ */
-/* --------------------------------- BUSCADOR --------------------------------- */
+/* ------------------------------------------------------- ADMIN ------------------------------------------------------- */
+
+/* ---------------------------------------- VERSIÓN MOBILE ---------------------------------------- */
+
+/* ------------------------- BUSCADOR ------------------------- */
 
 .buscador {
   display: flex;
@@ -813,11 +816,11 @@ footer .navbar__img {
 
 .buscador__search {
   padding: var(--spacing-4) var(--spacing-12);
-  border: 1px solid var(--background-oscuro);
+  border: 2px solid var(--background-oscuro);
   border-radius: 6px;
 }
 
-/* --------------------------------- PRODUCTOS --------------------------------- */
+/* ------------------------- PRODUCTOS ------------------------- */
 
 .productos {
   padding: var(--spacing-14);
@@ -903,6 +906,239 @@ td {
 
 .productos__icon {
   max-width: 2rem;
+}
+
+/* ---------------------------------------- VERSIÓN TABLET ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* ------------------------- BUSCADOR ------------------------- */
+
+  .buscador {
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: var(--spacing-8); */
+    /* padding: var(--spacing-14); */
+    padding-bottom: var(--spacing-4);
+  }
+
+  .buscador__icon {
+    max-width: 3rem;
+  }
+
+  .buscador__search {
+    /* padding: var(--spacing-4) var(--spacing-12); */
+    /* border: 2px solid var(--background-oscuro); */
+    /* border-radius: 6px; */
+    font-size: var(--xsmall-size-14px);
+    width: 40vw;
+  }
+
+  /* ------------------------- PRODUCTOS ------------------------- */
+
+  /* .productos {
+    padding: var(--spacing-14);
+  } */
+
+  .productos__header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding-bottom: var(--spacing-14); */
+    max-width: 625px;
+  }
+
+  /* Agrego un max-width para que el ancho del header */
+  /* no sobrepase el width total de la tabla. */
+
+  .productos__title {
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  .productos__add {
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: var(--spacing-4); */
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
+  }
+
+  .productos__add--icon {
+    font-size: var(--medium-size-20px);
+    /* color: var(--color-primario); */
+  }
+
+  /* .productos__list {
+    overflow-x: auto;
+  } */
+
+  .productos__table {
+    width: 625px;
+    /* border-collapse: collapse; */
+  }
+
+  /* La tabla consigue un width máximo de 625px */
+  /* Al usar la tabla con overflow y no de manera responsive */
+  /* indico un ancho absoluto. */
+
+  .productos__table th,
+  td {
+    /* text-align: left; */
+    font-size: var(--small-size-16px);
+    padding: var(--spacing-8) var(--spacing-12);
+  }
+
+  .productos__table th {
+    /* font-weight: 700; */
+    padding-bottom: var(--spacing-12);
+  }
+
+  /* .productos__table td {
+    font-weight: 500;
+  } */
+
+  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+  /* .productos__head th:first-child {
+    text-align: center;
+  } */
+
+  /* .productos__content td:first-child {
+    text-align: center;
+  } */
+
+  /* Alineo a la derecha el último elemento (delete-icon) y */
+  /* elimino su padding para que quede alineado con el */
+  /* add icon del header en caso de llegar a su máximo width. */
+
+  /* .productos__content td:last-child {
+    text-align: right;
+    padding-right: 0;
+  } */
+
+  .productos__icon {
+    cursor: pointer;
+    max-width: 3rem;
+  }
+}
+
+/* ---------------------------------------- VERSIÓN DESKTOP ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* ------------------------- BUSCADOR ------------------------- */
+
+  .buscador {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-12);
+    /* padding: var(--spacing-14); */
+    padding-bottom: var(--spacing-14);
+    padding-top: var(--spacing-24);
+  }
+
+  .buscador__icon {
+    max-width: 4rem;
+  }
+
+  .buscador__search {
+    padding: var(--spacing-8) var(--spacing-20);
+    /* border: 2px solid var(--background-oscuro); */
+    /* border-radius: 6px; */
+    font-size: var(--medium-size-20px);
+    width: 45%;
+  }
+
+  /* ------------------------- PRODUCTOS ------------------------- */
+
+  /* .productos {
+    padding: var(--spacing-14);
+  } */
+
+  .productos__header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding-bottom: var(--spacing-20);
+    max-width: 1100px;
+  }
+
+  /* Agrego un max-width para que el ancho del header */
+  /* no sobrepase el width total de la tabla. */
+
+  .productos__title {
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .productos__add {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-20);
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
+  }
+
+  .productos__add--icon {
+    font-size: var(--medium-size-20px);
+    /* color: var(--color-primario); */
+  }
+
+  /* .productos__list {
+    overflow-x: auto;
+  } */
+
+  .productos__table {
+    width: 1100px;
+    max-width: 100%;
+    /* border-collapse: collapse; */
+  }
+
+  /* La tabla consigue un width máximo de 1100px */
+  /* Al usar la tabla con overflow y no de manera responsive */
+  /* indico un ancho absoluto. */
+  /* Indico max-width responsive al achicarse la pantalla */
+  /* hasta llegar a menos de 1024px */
+
+  .productos__table th,
+  td {
+    /* text-align: left; */
+    font-size: var(--large-size-24px);
+    padding: var(--spacing-12) var(--spacing-24);
+  }
+
+  .productos__table th {
+    /* font-weight: 700; */
+    padding-bottom: var(--spacing-12);
+  }
+
+  /* .productos__table td {
+    font-weight: 500;
+  } */
+
+  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+  /* .productos__head th:first-child {
+    text-align: center;
+  } */
+
+  /* .productos__content td:first-child {
+    text-align: center;
+  } */
+
+  /* Alineo a la derecha el último elemento (delete-icon) y */
+  /* elimino su padding para que quede alineado con el */
+  /* add icon del header en caso de llegar a su máximo width. */
+
+  /* .productos__content td:last-child {
+    text-align: right;
+    padding-right: 0;
+  } */
+
+  .productos__icon {
+    max-width: 4rem;
+  }
 }
 
 /* ----------------------------------------------------------- DESKTOP SCREEN - MEDIA QUERY ----------------------------------------------------------- */
