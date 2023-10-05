@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
 
-/* --------------------------------- Variables --------------------------------- */
+/* --------------------------------------------------------------------------- VARIABLES --------------------------------------------------------------------------- */
 
 :root {
   /* :root y html son dos selectores que representan el elemento raíz del documento */
   /* :root lo utilizo para declarar las variables */
   /* html lo utilizo para hacer normalizaciones */
 
-  /* Palette */
+  /* -------------------- PALETTE -------------------- */
 
   --color-primario: #ff3333;
   --color-primario-90: rgba(255, 51, 51, 0.9);
@@ -31,12 +31,12 @@
   --color-fuente-gris: #333333;
   --color-fuente-oscuro: #111111;
 
-  /* Typography */
+  /* -------------------- TYPOGRAPHY -------------------- */
 
   --fuente-base: "Inter", sans-serif;
   --fuente-alternativa: "Raleway", sans-serif;
 
-  /* Size */
+  /* -------------------- SIZE -------------------- */
 
   --display-size-46px: 4.6em;
   --jumbo-size-38px: 3.8em;
@@ -47,8 +47,9 @@
   --small-size-16px: 1.6em;
   --xsmall-size-14px: 1.4em;
   --xxsmall-size-12px: 1.2em;
+  --normal-size-10px: 1em;
 
-  /* Spacing */
+  /* -------------------- SPACING -------------------- */
 
   --spacing-128: 12.8rem;
   --spacing-68: 6.8rem;
@@ -60,11 +61,14 @@
   --spacing-16: 1.6rem;
   --spacing-14: 1.4rem;
   --spacing-12: 1.2rem;
+  --spacing-10: 1rem;
   --spacing-8: 0.8rem;
+  --spacing-6: 0.6rem;
   --spacing-4: 0.4rem;
+  --spacing-2: 0.2rem;
 }
 
-/* --------------------------------- Normalizaciones --------------------------------- */
+/* --------------------------------------------------------------------------- NORMALIZACIONES --------------------------------------------------------------------------- */
 
 /* "Reseteamos" los estilos por defecto que traen los navegadores */
 
@@ -100,8 +104,10 @@ footer {
   color: var(--color-fuente-claro);
 }
 
+/* Configuramos que las imagenes y los inputs se adapten al ancho del contenedor */
+
 img {
-  max-width: 100%; /* Configuramos que las imagenes se adapten al ancho del contenedor */
+  max-width: 100%;
 }
 
 input {
@@ -113,13 +119,16 @@ input {
   margin: 0 auto;
 }
 
-/* ----------------------------------------------------------- MOBILE SCREEN ----------------------------------------------------------- */
+/* --------------------------------------------------------------------------- HEADER --------------------------------------------------------------------------- */
 
-/* --------------------------------- HEADER --------------------------------- */
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
 
 header {
   padding-bottom: 6.9rem;
 }
+
+/* Agrego 69px de padding botton para que el header no se superponga. */
+/* El header tiene de heigth 70px. Dejo 1 px de margen para evitar espacios en blanco. */
 
 header .navbar {
   background-color: var(--background-oscuro);
@@ -131,7 +140,7 @@ header .navbar {
   z-index: 10;
 }
 
-/* Al poner el header fixed y compartir clase con el navbar del footer tuve que acceder a la clase .navbar desde la etiqueta header.*/
+/* Accedo a la clase .navbar desde la etiqueta header para evitar confusiones con el footer.*/
 
 .navbar__img {
   width: 20rem;
@@ -148,26 +157,35 @@ header .navbar {
   display: none;
   position: absolute;
   background-color: var(--background-oscuro);
-  top: 6.1rem;
+  top: 6.9rem;
   width: 100%;
   padding: var(--spacing-14);
 }
 
+/* show-menu se aplica al hacer click en el icon hamburguesa. Mientras tanto el menú se oculta */
+
 .navbar__menu.show-menu {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-14);
+  gap: var(--spacing-16);
 }
 
 .navbar__link {
   display: inline-block;
   font-size: var(--small-size-16px);
   line-height: var(--spacing-20);
+  /* El line-height es para igualar aproximadamente de manera visual el tamaño que ocupa el icon del carrito. */
 }
 
 .navbar__cart {
   display: inline-block;
   width: var(--spacing-28);
+}
+
+/* Ocultamos el submenú desplegable para mobile screen */
+
+.navbar__shop--chevron {
+  display: none;
 }
 
 .navbar__submenu {
@@ -178,11 +196,150 @@ header .navbar {
   display: none;
 }
 
-.navbar__shop--chevron {
-  display: none;
+/* --------------------------------------------- Tablet Screen --------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  header {
+    padding-bottom: 9.1rem;
+  }
+
+  /* header .navbar {
+    background-color: var(--background-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  } */
+
+  .navbar__img {
+    width: 27.5rem;
+    /* margin-left: var(--spacing-14); */
+  }
+
+  .navbar__icon {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* background-color: var(--background-oscuro); */
+    top: auto;
+    width: auto;
+    padding: var(--spacing-28) var(--spacing-14);
+    gap: var(--spacing-16);
+  }
+
+  .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-18px);
+    line-height: auto;
+    padding: var(--spacing-8) var(--spacing-16);
+  }
+
+  .navbar__cart {
+    /* display: inline-block; */
+    width: 80%;
+  }
 }
 
-/* --------------------------------- FOOTER --------------------------------- */
+/* --------------------------------------------- Desktop Screen --------------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: var(--background-oscuro);
+    padding: var(--spacing-36) var(--spacing-14);
+  }
+
+  header .navbar {
+    /* background-color: var(--background-oscuro); */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    position: relative;
+    width: auto;
+    z-index: 0;
+  }
+
+  .navbar__img {
+    width: 35rem;
+    margin-left: 0;
+  }
+
+  /* .navbar__icon {
+    display: none;
+  } */
+
+  .navbar__menu {
+    /* display: flex; */
+    /* align-items: center; */
+    /* position: relative; */
+    /* background-color: var(--background-oscuro); */
+    /* top: auto; */
+    /* width: auto; */
+    padding: 0;
+    gap: var(--spacing-20);
+  }
+
+  .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-20px);
+    /* line-height: auto; */
+    /* padding: var(--spacing-8) var(--spacing-16); */
+    transition: 0.2s ease-in-out;
+  }
+
+  .navbar__link:hover {
+    background-color: var(--color-primario-90);
+  }
+
+  .navbar__cart {
+    /* display: inline-block; */
+    width: 100%;
+  }
+
+  /* Configuramos submenú desplegable para desktop screen. */
+
+  .navbar__shop--chevron {
+    display: inline-block;
+  }
+
+  .navbar__desplegable {
+    position: relative;
+  }
+
+  .navbar__submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: var(--background-oscuro);
+  }
+
+  .navbar__desplegable:hover .navbar__submenu {
+    display: flex;
+  }
+
+  .navbar__sublink {
+    display: block;
+    font-size: var(--medium-size-18px);
+    padding: var(--spacing-8) var(--spacing-16);
+    transition: 0.2s ease-in-out;
+  }
+
+  .navbar__sublink:hover {
+    background-color: var(--color-primario-90);
+  }
+}
+
+/* ------------------------------------------------------------ FOOTER ------------------------------------------------------------ */
+
+/* --------------------------------------------- Mobile Screen --------------------------------------------- */
 
 footer {
   background-color: var(--background-oscuro);
@@ -198,7 +355,7 @@ footer .navbar {
 .navbar__footer {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-8);
+  gap: var(--spacing-12);
 }
 
 .navbar__footer .navbar__link {
@@ -1152,7 +1309,7 @@ td {
   align-items: center;
   gap: var(--spacing-20);
   padding: var(--spacing-36) var(--spacing-14);
-  min-height: 100%;
+  /* min-height: 55vw; */
 }
 
 /* El min-height es para que no haya espacios en blanco debajo del footer en mobile. */
@@ -1311,7 +1468,7 @@ td {
 
 /* ---------------------------------------- VERSIÓN DESKTOP ---------------------------------------- */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .login {
     /* display: flex; */
     /* flex-direction: column; */
@@ -1395,97 +1552,6 @@ td {
 
 @media screen and (min-width: 1024px) {
   /* --------------------------------- HEADER --------------------------------- */
-
-  header {
-    background-color: var(--background-oscuro);
-    padding: var(--spacing-36) var(--spacing-14);
-    /* Agrego un padding arriba y abajo */
-  }
-
-  header .navbar {
-    /* background-color: var(--background-oscuro); */
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-    position: relative;
-    width: auto;
-    /* z-index: 10; */
-  }
-
-  .navbar__img {
-    width: 35rem;
-    margin-left: 0;
-  }
-
-  .navbar__icon {
-    display: none;
-    /* cursor: pointer;
-    font-size: var(--large-size-24px);
-    padding: var(--spacing-14); */
-  }
-
-  .navbar__menu {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: auto;
-    width: auto;
-    padding: 0;
-    gap: var(--spacing-20);
-  }
-
-  .navbar__link {
-    /* display: inline-block; */
-    font-size: var(--medium-size-20px);
-    line-height: auto;
-    padding: var(--spacing-8) var(--spacing-16);
-    transition: 0.2s ease-in-out;
-  }
-
-  .navbar__link:hover {
-    background-color: var(--color-primario-90);
-  }
-
-  .navbar__desplegable {
-    position: relative;
-  }
-
-  .navbar__subitem {
-    display: none;
-  }
-
-  .navbar__desplegable:hover .navbar__subitem {
-    display: inline-block;
-  }
-
-  .navbar__submenu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    z-index: 5;
-    background-color: var(--background-oscuro);
-  }
-
-  .navbar__sublink {
-    display: block;
-    font-size: var(--medium-size-18px);
-    padding: var(--spacing-8) var(--spacing-16);
-    transition: 0.2s ease-in-out;
-  }
-
-  .navbar__sublink:hover {
-    background-color: var(--color-primario-90);
-  }
-
-  .navbar__shop--chevron {
-    display: inline-block;
-  }
-
-  .navbar__cart {
-    /* display: inline-block; */
-    width: 100%;
-  }
 
   /* --------------------------------- FOOTER --------------------------------- */
 
