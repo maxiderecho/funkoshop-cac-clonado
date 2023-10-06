@@ -127,8 +127,7 @@ header {
   padding-bottom: 6.9rem;
 }
 
-/* Agrego 69px de padding botton para que el header no se superponga. */
-/* El header tiene de heigth 70px. Dejo 1 px de margen para evitar espacios en blanco. */
+/* Agrego padding botton para que el header no se superponga al estar fixed. */
 
 header .navbar {
   background-color: var(--background-oscuro);
@@ -140,7 +139,7 @@ header .navbar {
   z-index: 10;
 }
 
-/* Accedo a la clase .navbar desde la etiqueta header para evitar confusiones con el footer.*/
+/* Accedo a la clase .navbar desde la etiqueta header para evitar conflictos con el footer.*/
 
 .navbar__img {
   width: 20rem;
@@ -173,13 +172,6 @@ header .navbar {
 .navbar__link {
   display: inline-block;
   font-size: var(--small-size-16px);
-  line-height: var(--spacing-20);
-  /* El line-height es para igualar aproximadamente de manera visual el tamaño que ocupa el icon del carrito. */
-}
-
-.navbar__cart {
-  display: inline-block;
-  width: var(--spacing-28);
 }
 
 /* Ocultamos el submenú desplegable para mobile screen */
@@ -196,7 +188,7 @@ header .navbar {
   display: none;
 }
 
-/* --------------------------------------------- Tablet Screen --------------------------------------------- */
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
 
 @media screen and (min-width: 768px) {
   header {
@@ -236,17 +228,11 @@ header .navbar {
   .navbar__link {
     /* display: inline-block; */
     font-size: var(--medium-size-18px);
-    line-height: auto;
     padding: var(--spacing-8) var(--spacing-16);
-  }
-
-  .navbar__cart {
-    /* display: inline-block; */
-    width: 80%;
   }
 }
 
-/* --------------------------------------------- Desktop Screen --------------------------------------------- */
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
 
 @media screen and (min-width: 1024px) {
   header {
@@ -287,18 +273,12 @@ header .navbar {
   .navbar__link {
     /* display: inline-block; */
     font-size: var(--medium-size-20px);
-    /* line-height: auto; */
     /* padding: var(--spacing-8) var(--spacing-16); */
     transition: 0.2s ease-in-out;
   }
 
   .navbar__link:hover {
     background-color: var(--color-primario-90);
-  }
-
-  .navbar__cart {
-    /* display: inline-block; */
-    width: 100%;
   }
 
   /* Configuramos submenú desplegable para desktop screen. */
@@ -337,9 +317,9 @@ header .navbar {
   }
 }
 
-/* ------------------------------------------------------------ FOOTER ------------------------------------------------------------ */
+/* --------------------------------------------------------------------------- FOOTER --------------------------------------------------------------------------- */
 
-/* --------------------------------------------- Mobile Screen --------------------------------------------- */
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
 
 footer {
   background-color: var(--background-oscuro);
@@ -355,15 +335,19 @@ footer .navbar {
 .navbar__footer {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-12);
+  gap: var(--spacing-14);
 }
 
-.navbar__footer .navbar__link {
+/* Accedo a las clases a traves de la etiqueta footer ya que se comparten con las clases del header. */
+
+footer .navbar__link {
+  /* display: inline-block; */
   font-size: 1.3em;
 }
 
 footer .navbar__img {
   width: 8.5rem;
+  margin-left: 0;
 }
 
 .copyright {
@@ -372,9 +356,85 @@ footer .navbar__img {
   text-align: center;
 }
 
-/* ------------------------------------------------ HOME ------------------------------------------------ */
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
 
-/* --------------------------------- BANNER --------------------------------- */
+@media screen and (min-width: 768px) {
+  footer {
+    /* background-color: var(--background-oscuro); */
+    padding-top: var(--spacing-48);
+  }
+
+  /* footer .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+  /* .navbar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-14);
+} */
+
+  footer .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-18px);
+  }
+
+  footer .navbar__img {
+    width: 12rem;
+    /* margin-left: 0; */
+  }
+
+  .copyright {
+    padding-top: var(--spacing-48);
+    font-size: var(--small-size-16px);
+    /* text-align: center; */
+  }
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  footer {
+    /* background-color: var(--background-oscuro); */
+    padding-top: var(--spacing-68);
+  }
+
+  /* footer .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+  /* .navbar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-14);
+} */
+
+  footer .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-20px);
+  }
+
+  footer .navbar__img {
+    width: 14.3rem;
+    /* margin-left: 0; */
+  }
+
+  .copyright {
+    padding-top: var(--spacing-68);
+    font-size: var(--medium-size-20px);
+    /* text-align: center; */
+  }
+}
+
+/* --------------------------------------------------------------------------- HOME --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+/* -------------------- BANNER -------------------- */
 
 .banner {
   background-image: url(../img/funkos-banner\ 1.svg);
@@ -1551,43 +1611,6 @@ td {
 /* ----------------------------------------------------------- DESKTOP SCREEN - MEDIA QUERY ----------------------------------------------------------- */
 
 @media screen and (min-width: 1024px) {
-  /* --------------------------------- HEADER --------------------------------- */
-
-  /* --------------------------------- FOOTER --------------------------------- */
-
-  footer {
-    /* background-color: var(--background-oscuro); */
-    padding: var(--spacing-68) var(--spacing-14) var(--spacing-8);
-  }
-
-  /* footer .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
-
-  /* .navbar__footer {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-8);
-  } */
-
-  .navbar__footer .navbar__link {
-    font-size: var(--medium-size-20px);
-  }
-
-  /* Al haber hecho la medida del navbar__link para mobile y en especial para el header, tuve que acceder al navbar__link desde el navbar__footer. */
-
-  footer .navbar__img {
-    width: 14.3rem;
-  }
-
-  .copyright {
-    font-size: var(--medium-size-20px);
-    /* text-align: center; */
-    padding-top: var(--spacing-68);
-  }
-
   /* --------------------------------- BANNER --------------------------------- */
 
   .banner {
