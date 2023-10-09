@@ -439,19 +439,19 @@ footer .navbar__img {
 .banner {
   background-image: url(../img/funkos-banner\ 1.svg);
   background-size: cover;
-  padding: var(--spacing-24) var(--spacing-14);
+  padding: var(--spacing-36) var(--spacing-14);
 }
 
 .banner__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--spacing-8);
+  gap: var(--spacing-12);
 }
 
 .banner__title {
   font-family: var(--fuente-alternativa);
-  font-size: var(--medium-size-18px);
+  font-size: var(--medium-size-20px);
   font-weight: 700;
   color: var(--color-fuente-claro);
 }
@@ -610,6 +610,101 @@ footer .navbar__img {
   color: var(--color-secundario);
   font-size: 0.8em;
   font-weight: 700;
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* -------------------- BANNER -------------------- */
+
+  .banner {
+    /* background-image: url(../img/funkos-banner\ 1.svg); */
+    /* background-size: cover; */
+    padding: var(--spacing-68) var(--spacing-14);
+  }
+
+  .banner__content {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    gap: 0;
+  }
+
+  .banner__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+    /* color: var(--color-fuente-claro); */
+    padding-bottom: var(--spacing-12);
+  }
+
+  .banner__text {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--small-size-16px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-claro); */
+    padding-bottom: var(--spacing-36);
+  }
+
+  .banner__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-18px);
+    /* font-weight: 500; */
+    /* background-color: var(--background-claro); */
+    /* border-radius: 1em; */
+    /* padding: var(--spacing-8) var(--spacing-36); */
+    margin-top: 0;
+  }
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    /* background-image: url("../img/funkos-banner\ 1.svg"); */
+    /* background-size: cover; */
+    padding: var(--spacing-128) var(--spacing-14);
+  }
+
+  /* .banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  } */
+
+  .banner__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+    /* color: var(--color-fuente-claro); */
+    /* padding-bottom: var(--spacing-12); */
+  }
+
+  .banner__text {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--medium-size-18px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-claro); */
+    /* padding-bottom: var(--spacing-36); */
+  }
+
+  .banner__link {
+    /* display: inline-block; */
+    /* background-color: var(--background-claro); */
+    /* color: var(--color-fuente-oscuro); */
+    border-radius: 5em;
+    padding: var(--spacing-12) var(--spacing-68);
+    font-size: var(--medium-size-20px);
+    /* font-weight: 500; */
+    /* margin-top: 0; */
+    transition: 0.2s ease-in;
+  }
+
+  .banner__link:hover {
+    background-color: var(--color-primario);
+    transform: scale(1.08, 1.08);
+  }
 }
 
 /* ------------------------------------------------ CARRITO DE COMPRAS ------------------------------------------------ */
@@ -1612,52 +1707,6 @@ td {
 
 @media screen and (min-width: 1024px) {
   /* --------------------------------- BANNER --------------------------------- */
-
-  .banner {
-    /* background-image: url("../img/funkos-banner\ 1.svg");
-    background-size: cover; */
-    padding: var(--spacing-128) var(--spacing-14);
-  }
-
-  .banner__content {
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; */
-    gap: 0;
-  }
-
-  .banner__title {
-    /* font-family: var(--fuente-alternativa); */
-    font-size: var(--jumbo-size-38px);
-    /* font-weight: 700; */
-    /* color: var(--color-fuente-claro); */
-    padding-bottom: var(--spacing-12);
-  }
-
-  .banner__text {
-    /* font-family: var(--fuente-alternativa); */
-    font-size: var(--medium-size-18px);
-    /* font-weight: 400; */
-    /* color: var(--color-fuente-claro); */
-    padding-bottom: var(--spacing-36);
-  }
-
-  .banner__link {
-    /* display: inline-block;
-    background-color: var(--background-claro);
-    color: var(--color-fuente-oscuro); */
-    border-radius: 5em;
-    padding: var(--spacing-12) var(--spacing-68);
-    font-size: var(--medium-size-20px);
-    /* font-weight: 500; */
-    margin-top: 0;
-    transition: 0.2s ease-in;
-  }
-
-  .banner__link:hover {
-    background-color: var(--color-primario);
-    transform: scale(1.08, 1.08);
-  }
 
   /* --------------------------------- COLECCIONES --------------------------------- */
 
