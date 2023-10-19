@@ -1459,24 +1459,6 @@ dejo que el resto se coloque de manera responsive. */
     padding-right: 12rem;
   }
 
-  /* Agregamos un media-query para solucionar la alineación de
-  los subtitítulos del header con su contenido correspondiente. */
-
-  @media screen and (min-width: 1100px) {
-    .carrito__subtitle:nth-child(1) {
-      padding-left: 4rem;
-    }
-
-    .carrito__subtitle:nth-child(2) {
-      padding-left: 9rem;
-      padding-right: 0;
-    }
-
-    .carrito__subtitle:nth-child(3) {
-      padding-right: 13.5rem;
-    }
-  }
-
   /* .carrito__list {
     display: flex;
     flex-direction: column;
@@ -1637,9 +1619,30 @@ dejo que el resto se coloque de manera responsive. */
   }
 }
 
-/* ------------------------------------------------ SHOP ------------------------------------------------ */
+/* Agregamos un media-query para solucionar la alineación de
+  los subtitítulos del header con su contenido correspondiente. */
+
+@media screen and (min-width: 1100px) {
+  .carrito__subtitle:nth-child(1) {
+    padding-left: 4rem;
+  }
+
+  .carrito__subtitle:nth-child(2) {
+    padding-left: 9rem;
+    padding-right: 0;
+  }
+
+  .carrito__subtitle:nth-child(3) {
+    padding-right: 13.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------- SHOP --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
 @media screen and (width < 1024px) {
-  /* --------------------------------- FILTRO --------------------------------- */
+  /* -------------------- FILTRO -------------------- */
 
   .filter {
     display: flex;
@@ -1648,13 +1651,13 @@ dejo que el resto se coloque de manera responsive. */
   }
 
   .filter__search--icon {
-    width: 4.5em;
+    width: 4.5rem;
     cursor: pointer;
   }
 
   .filter__button {
     display: flex;
-    gap: 0.2rem;
+    gap: var(--spacing-2);
     align-items: center;
     font-size: var(--xsmall-size-14px);
     font-weight: 500;
@@ -1746,7 +1749,7 @@ dejo que el resto se coloque de manera responsive. */
     font-size: var(--xxsmall-size-12px);
   }
 
-  /* --------------------------------- SHOP --------------------------------- */
+  /* -------------------- SHOP -------------------- */
 
   .shop__container {
     padding: var(--spacing-14);
@@ -1761,13 +1764,13 @@ dejo que el resto se coloque de manera responsive. */
   .shop {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--spacing-10);
   }
 
   .shop__list {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--spacing-10);
   }
 
   .shop__item .card-item {
@@ -1788,692 +1791,12 @@ dejo que el resto se coloque de manera responsive. */
   }
 }
 
-/* ------------------------------------------------ ITEM ------------------------------------------------ */
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
 
-.item__page {
-  padding: var(--spacing-14);
-}
-
-/* --------------------------------- ITEM --------------------------------- */
-
-.item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  align-items: center;
-  padding-bottom: var(--spacing-14);
-  row-gap: var(--spacing-4);
-}
-
-.item__pago--article {
-  display: none;
-}
-
-.item__carrito--article {
-  display: none;
-}
-
-.item__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-8);
-}
-
-.item__license {
-  font-weight: 500;
-  color: var(--color-fuente-gris);
-}
-
-.item__title {
-  font-size: var(--xsmall-size-14px);
-  font-weight: 700;
-}
-
-.item__description {
-  font-weight: 400;
-  color: var(--color-fuente-gris);
-}
-
-.item__price {
-  font-size: var(--xsmall-size-14px);
-  font-weight: 400;
-  color: var(--color-fuente-gris);
-}
-
-.item__carrito {
-  grid-column: 1/3;
-  grid-row: 2;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-bottom: var(--spacing-8);
-}
-
-.item__cantidad {
-  max-width: 20%;
-  text-align: center;
-  padding: var(--spacing-4) var(--spacing-8);
-}
-
-.item__add-cart {
-  padding: var(--spacing-4) var(--spacing-8);
-  background-color: var(--color-primario);
-  color: var(--color-fuente-claro);
-  border: 0;
-  font-weight: 400;
-}
-
-.item__pago {
-  grid-column: 1/3;
-  grid-row: 3;
-  text-align: center;
-  color: var(--color-secundario);
-  font-size: var(--xxsmall-size-12px);
-  font-weight: 600;
-}
-
-.item__pago--border {
-  border-bottom: 0.5px solid var(--color-secundario);
-}
-
-/* ------------------------------------------------------- ADMIN ------------------------------------------------------- */
-
-/* ---------------------------------------- VERSIÓN MOBILE ---------------------------------------- */
-
-/* ------------------------- BUSCADOR ------------------------- */
-
-.buscador {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-8);
-  padding: var(--spacing-14);
-  padding-bottom: 0;
-}
-
-.buscador__icon {
-  max-width: 2.3rem;
-}
-
-.buscador__search {
-  padding: var(--spacing-4) var(--spacing-12);
-  border: 2px solid var(--background-oscuro);
-  border-radius: 6px;
-}
-
-/* ------------------------- PRODUCTOS ------------------------- */
-
-.productos {
-  padding: var(--spacing-14);
-}
-
-.productos__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: var(--spacing-14);
-  max-width: 500px;
-}
-
-/* Agrego un max-width para que el ancho del header */
-/* no sobrepase el width total de la tabla. */
-
-.productos__title {
-  font-size: var(--small-size-16px);
-  font-weight: 700;
-}
-
-.productos__add {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-  font-size: 1em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.productos__add--icon {
-  font-size: var(--small-size-16px);
-  color: var(--color-primario);
-}
-
-.productos__list {
-  overflow-x: auto;
-}
-
-.productos__table {
-  width: 500px;
-  border-collapse: collapse;
-}
-
-/* La tabla consigue un width máximo de 500px */
-/* Al usar la tabla con overflow y no de manera responsive */
-/* indico un ancho absoluto. */
-
-.productos__table th,
-td {
-  text-align: left;
-  font-size: var(--xxsmall-size-12px);
-  padding: var(--spacing-4) var(--spacing-8);
-}
-
-.productos__table th {
-  font-weight: 700;
-  padding-bottom: var(--spacing-8);
-}
-
-.productos__table td {
-  font-weight: 500;
-}
-
-/* Centralizo la primer columna debido al modelo inicial del proyecto. */
-
-.productos__head th:first-child {
-  text-align: center;
-}
-
-.productos__content td:first-child {
-  text-align: center;
-}
-
-/* Alineo a la derecha el último elemento (delete-icon) y */
-/* elimino su padding para que quede alineado con el */
-/* add icon del header en caso de llegar a su máximo width. */
-
-.productos__content td:last-child {
-  text-align: right;
-  padding-right: 0;
-}
-
-.productos__icon {
-  max-width: 2rem;
-}
-
-/* ---------------------------------------- VERSIÓN TABLET ---------------------------------------- */
-
-@media screen and (min-width: 768px) {
-  /* ------------------------- BUSCADOR ------------------------- */
-
-  .buscador {
-    /* display: flex; */
-    /* align-items: center; */
-    /* gap: var(--spacing-8); */
-    /* padding: var(--spacing-14); */
-    padding-bottom: var(--spacing-4);
-  }
-
-  .buscador__icon {
-    max-width: 3rem;
-  }
-
-  .buscador__search {
-    /* padding: var(--spacing-4) var(--spacing-12); */
-    /* border: 2px solid var(--background-oscuro); */
-    /* border-radius: 6px; */
-    font-size: var(--xsmall-size-14px);
-    width: 40vw;
-  }
-
-  /* ------------------------- PRODUCTOS ------------------------- */
-
-  /* .productos {
-    padding: var(--spacing-14);
-  } */
-
-  .productos__header {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* padding-bottom: var(--spacing-14); */
-    max-width: 625px;
-  }
-
-  /* Agrego un max-width para que el ancho del header */
-  /* no sobrepase el width total de la tabla. */
-
-  .productos__title {
-    font-size: var(--large-size-24px);
-    /* font-weight: 700; */
-  }
-
-  .productos__add {
-    /* display: flex; */
-    /* align-items: center; */
-    /* gap: var(--spacing-4); */
-    font-size: var(--xsmall-size-14px);
-    /* font-weight: 700; */
-    /* text-transform: uppercase; */
-  }
-
-  .productos__add--icon {
-    font-size: var(--medium-size-20px);
-    /* color: var(--color-primario); */
-  }
-
-  /* .productos__list {
-    overflow-x: auto;
-  } */
-
-  .productos__table {
-    width: 625px;
-    /* border-collapse: collapse; */
-  }
-
-  /* La tabla consigue un width máximo de 625px */
-  /* Al usar la tabla con overflow y no de manera responsive */
-  /* indico un ancho absoluto. */
-
-  .productos__table th,
-  td {
-    /* text-align: left; */
-    font-size: var(--small-size-16px);
-    padding: var(--spacing-8) var(--spacing-12);
-  }
-
-  .productos__table th {
-    /* font-weight: 700; */
-    padding-bottom: var(--spacing-12);
-  }
-
-  /* .productos__table td {
-    font-weight: 500;
-  } */
-
-  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
-
-  /* .productos__head th:first-child {
-    text-align: center;
-  } */
-
-  /* .productos__content td:first-child {
-    text-align: center;
-  } */
-
-  /* Alineo a la derecha el último elemento (delete-icon) y */
-  /* elimino su padding para que quede alineado con el */
-  /* add icon del header en caso de llegar a su máximo width. */
-
-  /* .productos__content td:last-child {
-    text-align: right;
-    padding-right: 0;
-  } */
-
-  .productos__icon {
-    cursor: pointer;
-    max-width: 3rem;
-  }
-}
-
-/* ---------------------------------------- VERSIÓN DESKTOP ---------------------------------------- */
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
 
 @media screen and (min-width: 1024px) {
-  /* ------------------------- BUSCADOR ------------------------- */
-
-  .buscador {
-    /* display: flex; */
-    /* align-items: center; */
-    gap: var(--spacing-12);
-    /* padding: var(--spacing-14); */
-    padding-bottom: var(--spacing-14);
-    padding-top: var(--spacing-24);
-  }
-
-  .buscador__icon {
-    max-width: 4rem;
-  }
-
-  .buscador__search {
-    padding: var(--spacing-8) var(--spacing-20);
-    /* border: 2px solid var(--background-oscuro); */
-    /* border-radius: 6px; */
-    font-size: var(--medium-size-20px);
-    width: 45%;
-  }
-
-  /* ------------------------- PRODUCTOS ------------------------- */
-
-  /* .productos {
-    padding: var(--spacing-14);
-  } */
-
-  .productos__header {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    padding-bottom: var(--spacing-20);
-    max-width: 1100px;
-  }
-
-  /* Agrego un max-width para que el ancho del header */
-  /* no sobrepase el width total de la tabla. */
-
-  .productos__title {
-    font-size: var(--jumbo-size-38px);
-    /* font-weight: 700; */
-  }
-
-  .productos__add {
-    /* display: flex; */
-    /* align-items: center; */
-    gap: var(--spacing-20);
-    font-size: var(--large-size-24px);
-    /* font-weight: 700; */
-    /* text-transform: uppercase; */
-  }
-
-  .productos__add--icon {
-    font-size: var(--medium-size-20px);
-    /* color: var(--color-primario); */
-  }
-
-  /* .productos__list {
-    overflow-x: auto;
-  } */
-
-  .productos__table {
-    width: 1100px;
-    max-width: 100%;
-    /* border-collapse: collapse; */
-  }
-
-  /* La tabla consigue un width máximo de 1100px */
-  /* Al usar la tabla con overflow y no de manera responsive */
-  /* indico un ancho absoluto. */
-  /* Indico max-width responsive al achicarse la pantalla */
-  /* hasta llegar a menos de 1024px */
-
-  .productos__table th,
-  td {
-    /* text-align: left; */
-    font-size: var(--large-size-24px);
-    padding: var(--spacing-12) var(--spacing-24);
-  }
-
-  .productos__table th {
-    /* font-weight: 700; */
-    padding-bottom: var(--spacing-12);
-  }
-
-  /* .productos__table td {
-    font-weight: 500;
-  } */
-
-  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
-
-  /* .productos__head th:first-child {
-    text-align: center;
-  } */
-
-  /* .productos__content td:first-child {
-    text-align: center;
-  } */
-
-  /* Alineo a la derecha el último elemento (delete-icon) y */
-  /* elimino su padding para que quede alineado con el */
-  /* add icon del header en caso de llegar a su máximo width. */
-
-  /* .productos__content td:last-child {
-    text-align: right;
-    padding-right: 0;
-  } */
-
-  .productos__icon {
-    max-width: 4rem;
-  }
-}
-
-/* ------------------------------------------------------- LOGIN ------------------------------------------------------- */
-
-/* ---------------------------------------- VERSIÓN MOBILE ---------------------------------------- */
-
-.login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-20);
-  padding: var(--spacing-36) var(--spacing-14);
-  /* min-height: 55vw; */
-}
-
-/* El min-height es para que no haya espacios en blanco debajo del footer en mobile. */
-
-.login__title {
-  font-family: var(--fuente-alternativa);
-  font-size: var(--medium-size-20px);
-  font-weight: 700;
-}
-
-.login__form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-20);
-}
-
-.login__list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-20);
-}
-
-.login__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--spacing-12);
-}
-
-.login__label {
-  font-size: var(--small-size-16px);
-  font-weight: 400;
-}
-
-.login__input {
-  font-size: var(--xxsmall-size-12px);
-  border: 0;
-  border-bottom: 1px solid var(--color-primario);
-  padding: var(--spacing-2);
-}
-
-.login__enter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-14);
-}
-
-.login__button {
-  font-size: var(--xxsmall-size-12px);
-  font-weight: 400;
-  color: var(--color-fuente-claro);
-  background-color: var(--color-primario);
-  border: 0;
-  padding: var(--spacing-8) var(--spacing-16);
-}
-
-.login__checkbox {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-}
-
-.login__checkbox--label {
-  font-size: var(--xxsmall-size-12px);
-  font-weight: 400;
-}
-
-.login__olvidar {
-  font-size: var(--xxsmall-size-12px);
-  font-weight: 400;
-  color: var(--color-secundario);
-}
-
-/* ---------------------------------------- VERSIÓN TABLET ---------------------------------------- */
-
-@media screen and (min-width: 768px) {
-  .login {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    gap: var(--spacing-24);
-    /* padding: var(--spacing-28) var(--spacing-14); */
-  }
-
-  .login__title {
-    /* font-family: var(--fuente-alternativa); */
-    font-size: var(--large-size-24px);
-    /* font-weight: 700; */
-  }
-
-  .login__form {
-    /* display: flex; */
-    /* flex-direction: column; */
-    gap: var(--spacing-20);
-  }
-
-  .login__list {
-    /* display: flex; */
-    /* flex-direction: column; */
-    gap: var(--spacing-20);
-  }
-
-  .login__content {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: baseline; */
-    gap: var(--spacing-14);
-  }
-
-  .login__label {
-    font-size: var(--small-size-16px);
-    /* font-weight: 400; */
-  }
-
-  .login__input {
-    font-size: var(--xsmall-size-14px);
-    /* border: 0; */
-    border-bottom: 2px solid var(--color-primario);
-    padding: var(--spacing-4) 0;
-  }
-
-  .login__enter {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: var(--spacing-16);
-  }
-
-  /* .login__button {
-    font-size: var(--xxsmall-size-12px);
-    font-weight: 400;
-    color: var(--color-fuente-claro);
-    background-color: var(--color-primario);
-    border: 0;
-    padding: var(--spacing-8) var(--spacing-16);
-  } */
-
-  .login__checkbox {
-    /* display: flex; */
-    /* align-items: center; */
-    gap: var(--spacing-8);
-  }
-
-  /* .login__checkbox--label {
-    font-size: var(--xxsmall-size-12px);
-    font-weight: 400;
-  } */
-
-  /* .login__olvidar {
-    font-size: var(--xxsmall-size-12px);
-    font-weight: 400;
-    color: var(--color-secundario);
-  } */
-}
-
-/* ---------------------------------------- VERSIÓN DESKTOP ---------------------------------------- */
-
-@media screen and (min-width: 1024px) {
-  .login {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    gap: var(--spacing-28);
-    padding: var(--spacing-36) var(--spacing-14);
-  }
-
-  .login__title {
-    /* font-family: var(--fuente-alternativa); */
-    font-size: var(--jumbo-size-38px);
-    /* font-weight: 700; */
-  }
-
-  .login__form {
-    /* display: flex; */
-    /* flex-direction: column; */
-    gap: var(--spacing-28);
-  }
-
-  .login__list {
-    /* display: flex; */
-    /* flex-direction: column; */
-    gap: var(--spacing-28);
-  }
-
-  .login__content {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: baseline; */
-    gap: var(--spacing-14);
-  }
-
-  .login__label {
-    font-size: var(--large-size-24px);
-    /* font-weight: 400; */
-  }
-
-  .login__input {
-    font-size: var(--small-size-16px);
-    /* border: 0; */
-    border-bottom: 2px solid var(--color-primario);
-    padding: var(--spacing-4) 0;
-  }
-
-  .login__enter {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: var(--spacing-36);
-  }
-
-  .login__button {
-    font-size: var(--xsmall-size-14px);
-    /* font-weight: 400; */
-    /* color: var(--color-fuente-claro); */
-    /* background-color: var(--color-primario); */
-    /* border: 0; */
-    padding: var(--spacing-8) var(--spacing-24);
-  }
-
-  .login__checkbox {
-    /* display: flex; */
-    /* align-items: center; */
-    gap: var(--spacing-8);
-  }
-
-  .login__checkbox--label {
-    font-size: var(--medium-size-18px);
-    /* font-weight: 400; */
-  }
-
-  .login__olvidar {
-    font-size: var(--xsmall-size-14px);
-    /* font-weight: 400; */
-    /* color: var(--color-secundario); */
-  }
-}
-
-/* ----------------------------------------------------------- DESKTOP SCREEN - MEDIA QUERY ----------------------------------------------------------- */
-
-@media screen and (min-width: 1024px) {
-  /* ------------------------------------------------ SHOP ------------------------------------------------ */
+  /* -------------------- SHOP -------------------- */
 
   .shop__container {
     padding: var(--spacing-48) var(--spacing-14);
@@ -2484,7 +1807,7 @@ td {
     gap: var(--spacing-14);
   }
 
-  /* --------------------------------- FILTRO --------------------------------- */
+  /* -------------------- FILTRO -------------------- */
 
   .filter {
     display: flex;
@@ -2572,7 +1895,7 @@ td {
     font-weight: 500;
   }
 
-  /* --------------------------------- SHOP --------------------------------- */
+  /* -------------------- SHOP -------------------- */
 
   .shop {
     display: flex;
@@ -2594,20 +1917,115 @@ td {
   .shop__item .card-item__tag {
     /* background-color: var(--color-primario);
     color: var(--color-fuente-claro); */
-    font-size: 1em;
+    font-size: var(--normal-size-10px);
     /* font-weight: 500; */
     padding: var(--spacing-8) var(--spacing-16);
     /* position: absolute;
     right: 0; */
   }
+}
 
-  /* ------------------------------------------------ ITEM ------------------------------------------------ */
+/* --------------------------------------------------------------------------- ITEM --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+/* -------------------- ITEM -------------------- */
+
+.item__page {
+  padding: var(--spacing-14);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  padding-bottom: var(--spacing-48);
+  row-gap: var(--spacing-4);
+}
+
+.item__pago--article {
+  display: none;
+}
+
+.item__carrito--article {
+  display: none;
+}
+
+.item__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.item__license {
+  font-weight: 500;
+  color: var(--color-fuente-gris);
+}
+
+.item__title {
+  font-size: var(--xsmall-size-14px);
+  font-weight: 700;
+}
+
+.item__description {
+  font-weight: 400;
+  color: var(--color-fuente-gris);
+}
+
+.item__price {
+  font-size: var(--xsmall-size-14px);
+  font-weight: 400;
+  color: var(--color-fuente-gris);
+}
+
+.item__carrito {
+  grid-column: 1/3;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: var(--spacing-8);
+}
+
+.item__cantidad {
+  max-width: 20%;
+  text-align: center;
+  padding: var(--spacing-4) var(--spacing-8);
+}
+
+.item__add-cart {
+  padding: var(--spacing-4) var(--spacing-8);
+  background-color: var(--color-primario);
+  color: var(--color-fuente-claro);
+  border: 0;
+  font-weight: 400;
+}
+
+.item__pago {
+  grid-column: 1/3;
+  grid-row: 3;
+  text-align: center;
+  color: var(--color-secundario);
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 600;
+  margin-top: var(--spacing-6);
+}
+
+.item__pago--border {
+  border-bottom: 1px solid var(--color-secundario);
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- ITEM -------------------- */
 
   .item__page {
     padding: var(--spacing-14);
   }
-
-  /* --------------------------------- ITEM --------------------------------- */
 
   .item {
     /* display: grid; */
@@ -2696,16 +2114,615 @@ td {
   /* .item__pago--border {
     border-bottom: 0.5px solid var(--color-secundario);
   } */
+}
 
-  /* --------------------------------- ANIMATIONS --------------------------------- */
+/* --------------------------------------------------------------------------- ADMIN --------------------------------------------------------------------------- */
 
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
 
-    100% {
-      opacity: 1;
-    }
+/* -------------------- BUSCADOR -------------------- */
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-14);
+  padding-bottom: 0;
+}
+
+.buscador__icon {
+  max-width: 2.3rem;
+}
+
+.buscador__search {
+  padding: var(--spacing-4) var(--spacing-12);
+  border: 2px solid var(--background-oscuro);
+  border-radius: 6px;
+}
+
+/* -------------------- PRODUCTOS -------------------- */
+
+.productos {
+  padding: var(--spacing-14);
+}
+
+.productos__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-14);
+  max-width: 500px;
+}
+
+/* Agrego un max-width para que el ancho del header
+no sobrepase el width total de la tabla. */
+
+.productos__title {
+  font-size: var(--small-size-16px);
+  font-weight: 700;
+}
+
+.productos__add {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  font-size: var(--normal-size-10px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.productos__add--icon {
+  font-size: var(--small-size-16px);
+  color: var(--color-primario);
+}
+
+.productos__list {
+  overflow-x: auto;
+}
+
+.productos__table {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+/* La tabla consigue un width máximo de 500px.
+Al usar la tabla con overflow y no de manera responsive
+indico un ancho absoluto. */
+
+.productos__table th,
+td {
+  text-align: left;
+  font-size: var(--xxsmall-size-12px);
+  padding: var(--spacing-4) var(--spacing-8);
+}
+
+.productos__table th {
+  font-weight: 700;
+  padding-bottom: var(--spacing-8);
+}
+
+.productos__table td {
+  font-weight: 500;
+}
+
+/* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+.productos__head th:first-child {
+  text-align: center;
+}
+
+.productos__content td:first-child {
+  text-align: center;
+}
+
+/* Alineo a la derecha el último elemento (delete-icon) y
+elimino su padding para que quede alineado con el
+add icon del header en caso de llegar a su máximo width. */
+
+.productos__content td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.productos__icon {
+  cursor: pointer;
+  max-width: 2rem;
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* -------------------- BUSCADOR -------------------- */
+
+  .buscador {
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: var(--spacing-8); */
+    /* padding: var(--spacing-14); */
+    padding-bottom: var(--spacing-4);
+  }
+
+  .buscador__icon {
+    max-width: 3rem;
+  }
+
+  .buscador__search {
+    /* padding: var(--spacing-4) var(--spacing-12); */
+    /* border: 2px solid var(--background-oscuro); */
+    /* border-radius: 6px; */
+    font-size: var(--xsmall-size-14px);
+    width: 40vw;
+  }
+
+  /* -------------------- PRODUCTOS -------------------- */
+
+  /* .productos {
+    padding: var(--spacing-14);
+  } */
+
+  .productos__header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding-bottom: var(--spacing-14); */
+    max-width: 625px;
+  }
+
+  /* Agrego un max-width para que el ancho del header
+  no sobrepase el width total de la tabla. */
+
+  .productos__title {
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  .productos__add {
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: var(--spacing-4); */
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
+  }
+
+  .productos__add--icon {
+    font-size: var(--medium-size-20px);
+    /* color: var(--color-primario); */
+  }
+
+  /* .productos__list {
+    overflow-x: auto;
+  } */
+
+  .productos__table {
+    width: 625px;
+    /* border-collapse: collapse; */
+  }
+
+  /* La tabla consigue un width máximo de 625px.
+  Al usar la tabla con overflow y no de manera responsive
+  indico un ancho absoluto. */
+
+  .productos__table th,
+  td {
+    /* text-align: left; */
+    font-size: var(--small-size-16px);
+    padding: var(--spacing-8) var(--spacing-12);
+  }
+
+  .productos__table th {
+    /* font-weight: 700; */
+    padding-bottom: var(--spacing-12);
+  }
+
+  /* .productos__table td {
+    font-weight: 500;
+  } */
+
+  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+  /* .productos__head th:first-child {
+    text-align: center;
+  } */
+
+  /* .productos__content td:first-child {
+    text-align: center;
+  } */
+
+  /* Alineo a la derecha el último elemento (delete-icon) y */
+  /* elimino su padding para que quede alineado con el */
+  /* add icon del header en caso de llegar a su máximo width. */
+
+  /* .productos__content td:last-child {
+    text-align: right;
+    padding-right: 0;
+  } */
+
+  .productos__icon {
+    /* cursor: pointer; */
+    max-width: 3rem;
+  }
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- BUSCADOR -------------------- */
+
+  .buscador {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-12);
+    /* padding: var(--spacing-14); */
+    padding-bottom: var(--spacing-14);
+    padding-top: var(--spacing-24);
+  }
+
+  .buscador__icon {
+    max-width: 4rem;
+  }
+
+  .buscador__search {
+    padding: var(--spacing-8) var(--spacing-20);
+    /* border: 2px solid var(--background-oscuro); */
+    /* border-radius: 6px; */
+    font-size: var(--medium-size-20px);
+    width: 45%;
+  }
+
+  /* -------------------- PRODUCTOS -------------------- */
+
+  /* .productos {
+    padding: var(--spacing-14);
+  } */
+
+  .productos__header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding-bottom: var(--spacing-20);
+    max-width: 1100px;
+  }
+
+  /* Agrego un max-width para que el ancho del header
+  no sobrepase el width total de la tabla. */
+
+  .productos__title {
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .productos__add {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-20);
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
+  }
+
+  .productos__add--icon {
+    font-size: var(--medium-size-20px);
+    /* color: var(--color-primario); */
+  }
+
+  /* .productos__list {
+    overflow-x: auto;
+  } */
+
+  .productos__table {
+    width: 1100px;
+    max-width: 100%;
+    /* border-collapse: collapse; */
+  }
+
+  /* La tabla consigue un width máximo de 1100px.
+  Al usar la tabla con overflow y no de manera responsive
+  indico un ancho absoluto.
+  Indico max-width responsive al achicarse la pantalla
+  hasta llegar a menos de 1024px */
+
+  .productos__table th,
+  td {
+    /* text-align: left; */
+    font-size: var(--large-size-24px);
+    padding: var(--spacing-12) var(--spacing-24);
+  }
+
+  .productos__table th {
+    /* font-weight: 700; */
+    padding-bottom: var(--spacing-12);
+  }
+
+  /* .productos__table td {
+    font-weight: 500;
+  } */
+
+  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+  /* .productos__head th:first-child {
+    text-align: center;
+  } */
+
+  /* .productos__content td:first-child {
+    text-align: center;
+  } */
+
+  /* Alineo a la derecha el último elemento (delete-icon) y */
+  /* elimino su padding para que quede alineado con el */
+  /* add icon del header en caso de llegar a su máximo width. */
+
+  /* .productos__content td:last-child {
+    text-align: right;
+    padding-right: 0;
+  } */
+
+  .productos__icon {
+    /* cursor: pointer; */
+    max-width: 4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------- LOGIN --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+/* -------------------- LOGIN -------------------- */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-20);
+  padding: var(--spacing-68) var(--spacing-14);
+}
+
+.login__title {
+  font-family: var(--fuente-alternativa);
+  font-size: var(--medium-size-20px);
+  font-weight: 700;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.login__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.login__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-12);
+}
+
+.login__label {
+  font-size: var(--small-size-16px);
+  font-weight: 400;
+}
+
+.login__input {
+  font-size: var(--xxsmall-size-12px);
+  border: 0;
+  border-bottom: 1px solid var(--color-primario);
+  padding: var(--spacing-2);
+}
+
+.login__enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-14);
+}
+
+.login__button {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+  color: var(--color-fuente-claro);
+  background-color: var(--color-primario);
+  border: 0;
+  padding: var(--spacing-8) var(--spacing-16);
+}
+
+.login__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.login__checkbox--label {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+}
+
+.login__olvidar {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+  color: var(--color-secundario);
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* -------------------- LOGIN -------------------- */
+
+  .login {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: var(--spacing-24);
+    padding: var(--spacing-36) var(--spacing-14);
+  }
+
+  .login__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  /* .login__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+  } */
+
+  /* .login__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+  } */
+
+  .login__content {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+    gap: var(--spacing-14);
+  }
+
+  /* .login__label {
+    font-size: var(--small-size-16px);
+    font-weight: 400;
+  } */
+
+  .login__input {
+    font-size: var(--xsmall-size-14px);
+    /* border: 0; */
+    border-bottom: 2px solid var(--color-primario);
+    padding: var(--spacing-4) 0;
+  }
+
+  .login__enter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: var(--spacing-16);
+  }
+
+  /* .login__button {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+    color: var(--color-fuente-claro);
+    background-color: var(--color-primario);
+    border: 0;
+    padding: var(--spacing-8) var(--spacing-16);
+  } */
+
+  .login__checkbox {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-8);
+  }
+
+  /* .login__checkbox--label {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+  } */
+
+  /* .login__olvidar {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+    color: var(--color-secundario);
+  } */
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- LOGIN -------------------- */
+
+  .login {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: var(--spacing-28);
+    /* padding: var(--spacing-36) var(--spacing-14); */
+  }
+
+  .login__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .login__form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-28);
+  }
+
+  .login__list {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-28);
+  }
+
+  /* .login__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-14);
+  } */
+
+  .login__label {
+    font-size: var(--large-size-24px);
+    /* font-weight: 400; */
+  }
+
+  .login__input {
+    font-size: var(--small-size-16px);
+    /* border: 0; */
+    /* border-bottom: 2px solid var(--color-primario); */
+    /* padding: var(--spacing-4) 0; */
+  }
+
+  .login__enter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: var(--spacing-36);
+  }
+
+  .login__button {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-claro); */
+    /* background-color: var(--color-primario); */
+    /* border: 0; */
+    padding: var(--spacing-8) var(--spacing-24);
+  }
+
+  /* .login__checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+  } */
+
+  .login__checkbox--label {
+    font-size: var(--medium-size-18px);
+    /* font-weight: 400; */
+  }
+
+  .login__olvidar {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 400; */
+    /* color: var(--color-secundario); */
+  }
+}
+
+/* --------------------------------------------------------------------------- ANIMATIONS --------------------------------------------------------------------------- */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
