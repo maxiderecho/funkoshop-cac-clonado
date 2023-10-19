@@ -2469,12 +2469,22 @@ add icon del header en caso de llegar a su máximo width. */
 
 /* -------------------- LOGIN -------------------- */
 
+.body__mobile {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Agregamos body__mobile para evitar espacios en la pantalla
+cuando el contenido no llegue a ocupar todo el height. */
+
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-20);
-  padding: var(--spacing-68) var(--spacing-14);
+  padding: var(--spacing-36) var(--spacing-14);
 }
 
 .login__title {
