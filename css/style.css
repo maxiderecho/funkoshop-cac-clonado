@@ -3,9 +3,9 @@
 /* --------------------------------------------------------------------------- VARIABLES --------------------------------------------------------------------------- */
 
 :root {
-  /* :root y html son dos selectores que representan el elemento raíz del documento */
-  /* :root lo utilizo para declarar las variables */
-  /* html lo utilizo para hacer normalizaciones */
+  /* :root y html son dos selectores que representan el elemento raíz del documento.
+  :root lo utilizo para declarar las variables.
+  html lo utilizo para hacer normalizaciones */
 
   /* -------------------- PALETTE -------------------- */
 
@@ -80,9 +80,9 @@
 
 html {
   font-size: 62.5%;
-  /* La fuente del navegador por defecto mide 16px. */
-  /* Con esta normalización logramos que mida 10px */
-  /* Esto permite que sea mucho más facil trabajar con medidas relativas */
+  /* La fuente del navegador por defecto mide 16px.
+  Con esta normalización logramos que mida 10px.
+  Esto permite que sea mucho más facil trabajar con medidas relativas */
   font-family: var(--fuente-base);
   color: var(--color-fuente-oscuro);
 }
@@ -1944,13 +1944,18 @@ dejo que el resto se coloque de manera responsive. */
   row-gap: var(--spacing-4);
 }
 
+.item__carrito--article {
+  display: none;
+}
+
 .item__pago--article {
   display: none;
 }
 
-.item__carrito--article {
-  display: none;
-}
+/* .item__carrito--article e .item__pago--article son los contenedores
+que se encuentran dentro del mismo article. En la versión mobile tienen
+"display: none" porque debo usar .item__carrito e .item__pago que se encuentran
+fuera del article para poder ubicarlos correctamente en la grilla.*/
 
 .item__content {
   display: flex;
@@ -1959,6 +1964,7 @@ dejo que el resto se coloque de manera responsive. */
 }
 
 .item__license {
+  font-size: var(--normal-size-10px);
   font-weight: 500;
   color: var(--color-fuente-gris);
 }
@@ -1969,6 +1975,7 @@ dejo que el resto se coloque de manera responsive. */
 }
 
 .item__description {
+  font-size: var(--normal-size-10px);
   font-weight: 400;
   color: var(--color-fuente-gris);
 }
@@ -1991,11 +1998,13 @@ dejo que el resto se coloque de manera responsive. */
 .item__cantidad {
   max-width: 20%;
   text-align: center;
+  font-size: var(--xxsmall-size-12px);
   padding: var(--spacing-4) var(--spacing-8);
+  border: 0.5px solid #c9c9c9;
 }
 
 .item__add-cart {
-  padding: var(--spacing-4) var(--spacing-8);
+  padding: var(--spacing-6) var(--spacing-12);
   background-color: var(--color-primario);
   color: var(--color-fuente-claro);
   border: 0;
@@ -2018,24 +2027,37 @@ dejo que el resto se coloque de manera responsive. */
 
 /* ---------------------------------------- Tablet Screen ---------------------------------------- */
 
-/* ---------------------------------------- Desktop Screen ---------------------------------------- */
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   /* -------------------- ITEM -------------------- */
 
-  .item__page {
+  /* .item__page {
     padding: var(--spacing-14);
-  }
+  } */
 
   .item {
     /* display: grid; */
     /* grid-template-columns: repeat(2, 1fr); */
     grid-template-rows: 1fr;
-    align-items: center;
+    /* align-items: center; */
     padding-top: var(--spacing-36);
-    padding-bottom: var(--spacing-24);
+    /* padding-bottom: var(--spacing-48); */
     row-gap: 0;
   }
+
+  .item__carrito {
+    display: none;
+  }
+
+  .item__pago {
+    display: none;
+  }
+
+  /* Como aclaré anteriormente a partir de la Tablet-Screen vamos a usar
+  los contenedores .item__carrito--article e .item__pago--article para que
+  se puedan ubicar dentro de una misma columna de la grilla correctamente
+  de acuerdo con el modelo inicial de la página web (Ya que .item__content
+  tendría todos los contedores necesarios para utilizar flex). Los contenedores
+  .item__carrito e .item__pago tendrán "display: none" */
 
   .item__img {
     width: 91.5%;
@@ -2046,6 +2068,109 @@ dejo que el resto se coloque de manera responsive. */
     /* flex-direction: column; */
     gap: var(--spacing-16);
   }
+
+  .item__license {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 500; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__title {
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  .item__description {
+    font-size: var(--medium-size-18px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__price {
+    font-size: var(--large-size-24px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__carrito--article {
+    display: flex;
+    padding: var(--spacing-8) 0;
+    gap: var(--spacing-36);
+  }
+
+  .item__cantidad {
+    /* max-width: 20%; */
+    /* text-align: center; */
+    font-size: var(--xsmall-size-14px);
+    /* padding: var(--spacing-4) var(--spacing-8); */
+    /* border: 0.5px solid #c9c9c9; */
+  }
+
+  .item__add-cart {
+    font-size: var(--medium-size-18px);
+    padding: var(--spacing-8) var(--spacing-16);
+    /* background-color: var(--color-primario); */
+    /* color: var(--color-fuente-claro); */
+    /* border: 0; */
+    /* font-weight: 400; */
+  }
+
+  .item__pago--article {
+    display: block;
+    text-align: start;
+    color: var(--color-secundario);
+    font-size: var(--xsmall-size-14px);
+    font-weight: 700;
+  }
+
+  /* .item__pago--border {
+    border-bottom: 1px solid var(--color-secundario);
+  } */
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- ITEM -------------------- */
+
+  /* .item__page {
+    padding: var(--spacing-14);
+  } */
+
+  /* .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding-top: var(--spacing-36);
+    padding-bottom: var(--spacing-48);
+    row-gap: 0;
+  } */
+
+  /* .item__carrito {
+    display: none;
+  } */
+
+  /* .item__pago {
+    display: none;
+  } */
+
+  /* Como aclaré anteriormente a partir de la Tablet-Screen vamos a usar
+    los contenedores .item__carrito--article e .item__pago--article para que
+    se puedan ubicar dentro de una misma columna de la grilla correctamente
+    de acuerdo con el modelo inicial de la página web (Ya que .item__content
+    tendría todos los contedores necesarios para utilizar flex). Los contenedores
+    .item__carrito e .item__pago tendrán "display: none" */
+
+  /* .item__img {
+    width: 91.5%;
+  } */
+
+  /* .item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+  } */
 
   .item__license {
     font-size: var(--small-size-16px);
@@ -2070,46 +2195,36 @@ dejo que el resto se coloque de manera responsive. */
     /* color: var(--color-fuente-gris); */
   }
 
-  .item__carrito--article {
+  /* .item__carrito--article {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     padding: var(--spacing-8) 0;
     gap: var(--spacing-36);
-  }
+  } */
 
   .item__cantidad {
-    max-width: 20%;
-    text-align: center;
+    /* max-width: 20%; */
+    /* text-align: center; */
     font-size: var(--large-size-24px);
-    padding: var(--spacing-4) var(--spacing-8);
-    border: 0.5px solid #c9c9c9;
+    /* padding: var(--spacing-4) var(--spacing-8); */
+    /* border: 0.5px solid #c9c9c9; */
   }
 
-  .item__add-cart {
+  /* .item__add-cart {
+    font-size: var(--medium-size-18px);
     padding: var(--spacing-8) var(--spacing-16);
     background-color: var(--color-primario);
     color: var(--color-fuente-claro);
-    font-size: var(--medium-size-18px);
-    font-weight: 400;
     border: 0;
-  }
+    font-weight: 400;
+  } */
 
-  .item__pago--article {
+  /* .item__pago--article {
     display: block;
     text-align: start;
     color: var(--color-secundario);
     font-size: var(--xsmall-size-14px);
     font-weight: 700;
-  }
-
-  .item__carrito {
-    display: none;
-  }
-
-  .item__pago {
-    display: none;
-  }
+  } */
 
   /* .item__pago--border {
     border-bottom: 0.5px solid var(--color-secundario);
@@ -2469,14 +2584,14 @@ add icon del header en caso de llegar a su máximo width. */
 
 /* -------------------- LOGIN -------------------- */
 
-.body__mobile {
+.body__short-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Agregamos body__mobile para evitar espacios en la pantalla
+/* Agregamos .body__short-content para evitar espacios en la pantalla
 cuando el contenido no llegue a ocupar todo el height. */
 
 .login {
@@ -2562,6 +2677,16 @@ cuando el contenido no llegue a ocupar todo el height. */
 @media screen and (min-width: 768px) {
   /* -------------------- LOGIN -------------------- */
 
+  /* .body__short-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
+
+  /* Agregamos .body__short-content para evitar espacios en la pantalla
+  cuando el contenido no llegue a ocupar todo el height. */
+
   .login {
     /* display: flex; */
     /* flex-direction: column; */
@@ -2645,6 +2770,16 @@ cuando el contenido no llegue a ocupar todo el height. */
 
 @media screen and (min-width: 1024px) {
   /* -------------------- LOGIN -------------------- */
+
+  /* .body__short-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
+
+  /* Agregamos .body__short-content para evitar espacios en la pantalla
+  cuando el contenido no llegue a ocupar todo el height. */
 
   .login {
     /* display: flex; */
